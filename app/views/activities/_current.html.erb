@@ -1,0 +1,162 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<div class="well">
+  <%= link_to activity_newS_path(0), remote: true, class: 'btn btn-primary btn-no-padding' do %>
+   <span class="btn-label">
+			<span class="fa  fa-plus"></span>
+        </span>
+
+      Adauga
+  <% end %>
+
+</div>
+<div role="tabpanel">
+  <ul class="nav nav-tabs" role="tablist">
+    <% if !@activities_terminal.nil? %>
+    <li role="presentation" class="active">
+      <a href="#term" aria-controls="home" role="tab" data-toggle="tab">Sesiune Ani Terminali </a>
+    </li>
+        <% end %>
+    <% if !@activities_neterminal.nil? %>
+    <li role="presentation">
+      <a href="#neterm" aria-controls="profile" role="tab" data-toggle="tab">Sesiune Ani Neterminali</a>
+    </li>
+        <% end %>
+  </ul>
+  <div class="tab-content">
+    <% if !@activities_terminal.nil? %>
+        <div role="tabpanel" class="tab-pane active" id="term">
+          <div class="sem1-index">
+            <div class="table-responsive">
+
+              <table id='activities1' class="table table-striped table-hover" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                  <th>Materie</th>
+                  <th>Profesor</th>
+                  <th>Grupa</th>
+                  <th>Semestru</th>
+                  <th>Tip</th>
+                  <th>Optional</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody class="session-index">
+
+                <% @activities_terminal.each do |activity| %>
+                    <tr>
+                      <td>
+                        <%= activity.course.title %>
+                      </td>
+                      <td>
+                        <%= activity.teacher.last_name %> <%= activity.teacher.first_name %>
+                      </td>
+                      <td>
+                        <%= activity.evaluation_session_cohort.name %>
+                      </td>
+                      <td>
+                        <%= activity.semester %>
+                      </td>
+                      <td>
+                        <%= activity.activity_type %>
+                      </td>
+                      <td>
+                        <% if activity.is_optional %> DA <% else %> NU  <% end %>
+                      </td>
+
+                      <td>
+                        <%= link_to '', activity_editS_path(activity), remote: true, class: 'btn glyphicon glyphicon-edit' %>
+                        <%= link_to '', activity_deleteS_path(activity.id), remote: true, class: 'btn glyphicon glyphicon-trash' %>
+                      </td>
+                    </tr>
+                <% end %>
+                </tbody>
+              </table>
+            </div>
+            <br>
+          </div>
+
+        </div>
+    <% end %>
+    <% if !@activities_neterminal.nil? %>
+        <div role="tabpanel" class="tab-pane " id="neterm">
+          <div class="sem1-index">
+            <div class="table-responsive">
+
+              <table id='activities2' class="table table-striped table-hover" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                  <th>Materie</th>
+                  <th>Profesor</th>
+                  <th>Grupa</th>
+                  <th>Semestru</th>
+                  <th>Tip</th>
+                  <th>Optional</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody class="session-index">
+
+                <% @activities_neterminal.each do |activity| %>
+                    <tr>
+                      <td>
+                        <%= activity.course.title %>
+                      </td>
+                      <td>
+                        <%= activity.teacher.last_name %> <%= activity.teacher.first_name %>
+                      </td>
+                      <td>
+                        <%= activity.evaluation_session_cohort.name %>
+                      </td>
+                      <td>
+                        <%= activity.semester %>
+                      </td>
+                      <td>
+                        <%= activity.activity_type %>
+                      </td>
+                      <td>
+                        <% if activity.is_optional == true %> DA
+                        <% else %> NU
+                        <% end %>
+
+                      </td>
+
+                      <td>
+                        <%= link_to '', activity_editS_path(activity), remote: true, class: 'btn glyphicon glyphicon-edit' %>
+                        <%= link_to '', activity_deleteS_path(activity.id), remote: true, class: 'btn glyphicon glyphicon-trash' %>
+                      </td>
+                    </tr>
+                <% end %>
+                </tbody>
+              </table>
+            </div>
+            <br>
+          </div>
+
+        </div>
+    <% end %>
+  </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+
+        $('#activities1').DataTable();
+        $('#activities2').DataTable();
+    });
+</script>

@@ -1,0 +1,76 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<div class="page-header">
+
+  <h3>Sesiuni de evaluare active</h3>
+</div>
+<div style="margin-top:15px;">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#terminal" aria-controls="home" role="tab" data-toggle="tab">Sesiune activa ani terminali </a>
+    </li>
+    <li role="presentation">
+      <a href="#neterminal" aria-controls="profile" role="tab" data-toggle="tab">Sesiune activa ani neterminali</a>
+    </li>
+    <li role="presentation">
+      <a href="#stats" aria-controls="stats" role="tab" data-toggle="tab">Numarul de studenti care au evaluat</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="terminal">
+      <div class="terminal-index">
+        <%= render 'show_terminal' %>
+      </div>
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="neterminal">
+      <div class="neterminal-index">
+        <%= render 'show_neterminal' %>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="stats">
+      <div class="table-responsive">
+        <table id='stat' class="table table-striped table-hover" cellspacing="0" width="100%">
+          <thead>
+          <tr>
+            <th>Grupa</th>
+            <th>Numar Studenti</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @results.each do |r| %>
+          <tr>
+            <td> <%= r[1] %> </td>
+            <td> <%= r[0] %> </td>
+          </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="application/javascript">
+
+    $(document).ready(function() {
+
+        $('#stat').DataTable();
+    } );
+</script>

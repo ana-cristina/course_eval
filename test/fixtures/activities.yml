@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course_id: 
+  cohort_id: 
+  is_optional: false
+
+two:
+  course_id: 
+  cohort_id: 
+  is_optional: false

@@ -1,0 +1,56 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<% @evaluation_sessions_neterminal.each do |evaluation_session| %>
+    <tr>
+      <td class="col-md-1">#<%= evaluation_session.id %></td>
+      <td class="col-md-2"><%= evaluation_session.start_date.strftime('%d/%m/%y') %>
+        - <%= evaluation_session.end_date.strftime('%d/%m/%y') %></td>
+
+      <!--      <td class="col-md-2"><%= evaluation_session.form.title %></td>-->
+      <td class="col-md-1"><%= evaluation_session.semester %></td>
+      <td class="col-md-1"><%= evaluation_session.year %>
+        -<%= evaluation_session.year + 1 %></td>
+      <td class="col-md-1"><%= evaluation_session.session_status %></td>
+      <td class="col-md-2">
+
+        <%= evaluation_session.visibility == true ? 'Da' : 'Nu' %>
+
+      </td>
+      <td class="col-md-1">
+        <%= link_to 'Schimba vizibilitatea!', {:controller => "evaluation_sessions", :action => "set_visibility", :evaluation_id => evaluation_session.id }, method: :post, remote: true, class: 'btn btn-info' %>
+      </td>
+      <td class="col-md-1">
+        <% if evaluation_session.session_status != 'Finalizata' && @active_session_neterminal.nil? %>
+            <%= link_to 'Activeaza!', evaluation_session_activate_session_path(evaluation_session.id), method: :get, remote: true, class: 'btn btn-info' %>
+        <% end %>
+        <% if !@active_session_neterminal.nil? and @active_session_neterminal.id == evaluation_session.id %>
+            <%= link_to 'Finalizeaza!', evaluation_session_finalize_session_path(evaluation_session.id), method: :get, remote: true, class: 'btn btn-primary' %>
+        <% end %>
+      </td>
+
+      <td class="col-md-2">
+        <% if evaluation_session.session_status == 'Finalizata' %>
+            <%= link_to '', edit_evaluation_session_path(evaluation_session.id), remote: true, class: 'btn glyphicon glyphicon-edit disabled' %>
+        <% else %>
+            <%= link_to '', edit_evaluation_session_path(evaluation_session.id), remote: true, class: 'btn glyphicon glyphicon-edit' %>
+        <% end %>
+
+        <%= link_to '', evaluation_session_delete_path(evaluation_session.id), remote: true, class: 'btn glyphicon glyphicon-trash' %>
+      </td>
+
+    </tr>
+<% end %>

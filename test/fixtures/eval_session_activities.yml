@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course_id: 
+  evaluation_session_cohort_id: 
+  is_optional: false
+  teacher_id_id: 
+  year: 1
+  semester: 1
+  activity_type: MyString
+  evaluation_session_id: 
+
+two:
+  course_id: 
+  evaluation_session_cohort_id: 
+  is_optional: false
+  teacher_id_id: 
+  year: 1
+  semester: 1
+  activity_type: MyString
+  evaluation_session_id: 

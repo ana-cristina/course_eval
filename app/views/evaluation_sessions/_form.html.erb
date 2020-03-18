@@ -1,0 +1,176 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<%= form_for @evaluation_session, html: {class: 'form-horizontal basic-form'} do |f| %>
+
+    <% if @evaluation_session.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@evaluation_session.errors.count, 'error') %> prohibited this evaluation_session from
+            being saved:</h2>
+
+          <ul>
+            <% @evaluation_session.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Perioada de evaluare</h3>
+      </div>
+      <div class="panel-body">
+        <div class="form-group">
+          <label class="col-lg-4 control-label text-primary">Semestru:</label>
+
+          <div class="col-lg-8">
+            <%= f.select(:semester, options_for_select([['I', 1], ['II', 2]]), {}, {class: 'form-control  col-xs-9'}) %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-4 control-label text-primary" for="start_period">Data Start:</label>
+
+          <div class="col-lg-8">
+            <%= f.text_field :start_date, class: 'form-control start_period' %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-4 control-label text-primary" for="end_period">Data Sfarsit:</label>
+
+          <div class="col-lg-8">
+            <%= f.text_field :end_date, class: 'form-control end_period' %>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label style="float:left">
+                <%= f.check_box :terminal %> Terminal
+              </label>
+            </div>
+          </div>
+        </div>
+        <div id="for_terminal" style="display:none;">
+          <div class="form-group">
+            <label class="col-lg-4 control-label text-primary" for="start_period">Data Start Ani Terminali:</label>
+
+            <div class="col-lg-8">
+              <%= f.text_field :start_date_terminal, class: 'form-control start_period' %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-4 control-label text-primary" for="end_period">Data Sfarsit Ani Terminali:</label>
+
+            <div class="col-lg-8">
+              <%= f.text_field :end_date_terminal, class: 'form-control end_period' %>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Chestionar </h3>
+      </div>
+      <div class="panel-body">
+        <div class="form-group">
+          <label class="col-lg-4 control-label text-primary">Alege din Arhiva:</label>
+
+          <div class="col-lg-8">
+            <%= f.select(:form2, options_for_select(Form.all.collect { |p| [p.title, p.id] }), {}, {class: 'form-control  col-xs-9'}) %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label style="float:left">
+                <%= f.check_box :from_upload %> Incarca chestionar
+              </label>
+            </div>
+          </div>
+        </div>
+        <div id="from_upload" style="display:none;">
+
+          <div class="form-group">
+            <label class="col-lg-4 control-label text-primary" style="height: 40px; line-height: 40px;">Incarca
+              Chestionar:</label>
+
+            <div class="col-lg-8">
+              <div class="fileupload-new" data-provides="fileupload" style="text-align: left;">
+            <span class="btn btn-file">
+               <span class="btn btn-info btn-file"> <span class="fileupload-new">Alege fisier</span>
+                <span class="fileupload-exists">Modifica</span>
+                 <%= f.file_field :form1 %></span>
+            </span>
+                <span class="fileupload-preview"></span>
+                <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2" align="right">
+        <button class="btn btn-primary btn-no-padding" id="save_btn">
+          <span class="btn-label">
+            <span class="glyphicon glyphicon-save"></span>
+          </span>
+          Salveaza
+        </button>
+      </div>
+    </div>
+<% end %>
+
+<script type="text/javascript">
+    $(function () {
+        $(".start_period , .end_period").datepicker({
+            showOn: 'focus',
+            dateFormat: "dd-mm-yy",
+            buttonImageOnly: false
+        });
+        $(".start_period , .end_period")
+            .datepicker("setDate", Date.now());
+
+
+        var checkbox = document.getElementById('evaluation_session_terminal');
+        var details_div = document.getElementById('for_terminal');
+        checkbox.onchange = function () {
+            if (this.checked) {
+                details_div.style['display'] = 'block';
+            } else {
+                details_div.style['display'] = 'none';
+            }
+        };
+        var checkbox2 = document.getElementById('evaluation_session_from_upload');
+        var details_div2 = document.getElementById('from_upload');
+        checkbox2.onchange = function () {
+            if (this.checked) {
+                details_div2.style['display'] = 'block';
+            } else {
+                details_div2.style['display'] = 'none';
+            }
+        };
+
+    });
+</script>
+

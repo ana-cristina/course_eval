@@ -1,0 +1,73 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<%= form_tag evaluate_activity_path(:activity_id => @activity.id), method: :post, remote: true do %>
+    <div class="modal-header">
+
+      <%= link_to '&times;'.html_safe, '', class: 'close', data: {dismiss: "modal"} %>
+      <h4><b>  <%= @activity.course.title %></b> --
+        <b><%= @activity.teacher.last_name %> <%= @activity.teacher.first_name %></b></h4>
+      <h5><i><%= @activity.activity_type %></i></h5>
+    </div>
+
+    <div class="modal-body">
+      <div class=" has-error errors">
+      </div>
+      <% @content.each_with_index do |parent, qindex| %>
+
+          <% if parent["label"] %>
+
+              <h4><%= parent["label"] %></h4>
+              <hr>
+
+          <% elsif parent["intrebare"] %>
+
+              <% if parent["intrebare"].first["enunt"] %>
+
+                  <h5><%= parent["intrebare"].first["enunt"] %>
+                    <% r = parent["intrebare"].drop 1 %>
+                    <% if r.any? %>
+                        <b style="color:red">*</b>
+                    <% end %>
+                  </h5>
+              <% else %>
+
+                  <% r = parent["intrebare"] %>
+
+              <% end %>
+
+              <% if r.any? %>
+                  <div class="btn-group" data-toggle-name="<%= qindex+1 %>" data-toggle="buttons-radio">
+
+                    <% r.each_with_index do |rasp, i| %>
+                        <button type="button" value="<%= i+1 %>" class="btn btn-default" data-toggle="button"><%= rasp["rasp"] %></button>
+                    <% end %>
+
+                  </div>
+                  <input type="hidden" name="<%= qindex+1 %>" value="0"/>
+              <% else %>
+                  <textarea name="<%= qindex+1 %>" style="width: 100%;"></textarea>
+              <% end %>
+          <% end %>
+      <% end %>
+
+    </div>
+    <input type="hidden" id="tpcp" name="tpcp"/>
+    <div class="modal-footer">
+      <%= link_to 'Inchide', '', class: 'btn btn-danger', data: {dismiss: "modal"} %>
+      <%= submit_tag 'Salveaza', class: 'btn btn-primary' %>
+    </div>
+<% end %>

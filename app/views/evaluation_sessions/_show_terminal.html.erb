@@ -1,0 +1,122 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<% if @active_session.nil? %>
+
+    <h1>Nicio sesiune activa</h1>
+<% else %>
+    <br>
+    <div class="alert alert-info">
+      Pana acum au evaluat <%= @nrOfStudents %> studenti din <%= @terminal_tokens.length %>
+    </div>
+    <div class="well">
+      <div class="pull-right">
+        <%= link_to evaluation_session_generate_path(@active_session.id), remote: true, class: 'btn btn-primary token-btn btn-no-padding' do %>
+        <span class="btn-label">
+    		<span class="fa fa-refresh"></span>
+        </span>Genereaza Token-uri
+        <% end %>
+        <% if @terminal_tokens and @terminal_tokens.any? %>
+
+            <%= link_to evaluation_session_get_tokens_path(@active_session.id), class: 'btn btn-primary token-btn btn-no-padding' do %>
+        <span class="btn-label">
+			<span class="fa fa-download"></span>
+        </span>
+                Descarca Token-uri
+            <% end %>
+
+        <% end %>
+      </div>
+      <div class="clearfix">
+        <h4>
+          Perioada de evaluare:
+          <b> <%= @active_session.start_date.strftime('%d/%m/%y') %>
+            - <%= @active_session.end_date.strftime('%d/%m/%y') %></b>
+          <span style="margin-left: 10px;">    <b> Mai
+         sunt <%= (@active_session.end_date - @active_session.start_date).to_i %>
+            zile! </b></span>
+        </h4>
+
+        <div class="col-md-3 pull-right" style="padding-right: 0px;">
+
+          <%= form_tag activities_terminal_list_path, remote: true, class: "form-horizontal form", style: "display:inline;" do %>
+              <%= select_tag :department, options_from_collection_for_select(@departments_select, 'id', 'name', '0'), prompt: 'Toate', class: 'form-control ', :onChange => 'your_onchange_handler()' %>
+          <% end %>
+        </div>
+        <h4>
+          An universitar: <b> <%= @active_session.year %> - <%= @active_session.year + 1 %>,</b>
+          <span style="margin-left: 10px;">  Semestrul: <b> <%= @active_session.semester %></b></span>
+
+        </h4>
+        <% if !@active_session.form.nil? %>
+            <h4>
+              Chestionar Curs:
+              <b><%= link_to @active_session.form.title, @active_session.form, remote: true %></b>
+            </h4>
+        <% end %>
+        <% if !@active_session.formS.nil? %>
+            <h4>
+              Chestionar Seminar:
+              <b><%= link_to @active_session.formS.title, @active_session.formS, remote: true %></b>
+            </h4>
+        <% end %>
+        <% if !@active_session.formL.nil? %>
+            <h4>
+              Chestionar Laborator:
+              <b><%= link_to @active_session.formL.title, @active_session.formL, remote: true %></b>
+            </h4>
+        <% end %>
+        <% if !@active_session.formP.nil? %>
+            <h4>
+              Chestionar Proiect:
+              <b><%= link_to @active_session.formP.title, @active_session.formP, remote: true %></b>
+            </h4>
+        <% end %>
+      </div>
+    </div>
+
+
+    <div class="table-responsive">
+      <table id='active1' class="table table-striped table-hover" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+          <th>Materie</th>
+          <th>Profesor</th>
+          <th>Tip Activitate</th>
+          <th></th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody class="activities_terminal">
+        <%= render 'activities_terminal' %>
+        </tbody>
+      </table>
+    </div>
+    <br>
+
+    <script type="application/javascript">
+
+        your_onchange_handler = function () {
+            $(".form").submit();
+
+        }
+        $(document).ready(function () {
+
+            $('#active1').DataTable();
+        });
+    </script>
+
+<% end %>

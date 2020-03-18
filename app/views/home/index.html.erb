@@ -1,0 +1,74 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<div class="container-narrow " style="margin-top:100px;">
+  <% if @active_session.nil? and @active_session_neterminal.nil? %>
+      <div class="container">
+        <div class="alert alert-danger">
+          <div class="panel-title"> Nicio sesiune de evaluare activa.</div>
+        </div>
+      </div>
+  <% else %>
+
+      <% if !@active_session.nil? %>
+          <div class="container">
+            <div class="alert alert-info ">
+              <div class="panel-title" style="display:inline;">Perioada de evaluare sesiune activa ani terminali:
+                <b> <%= @active_session.start_date.strftime('%d/%m/%y') %>
+                  - <%= @active_session.end_date.strftime('%d/%m/%y') %></b>
+              </div>
+              <div style="display:inline; float:right">
+                <b> Mai sunt <%= (@active_session.end_date - DateTime.now.to_date + 1).to_i %> zile! </b>
+              </div>
+            </div>
+          </div>
+      <% end %>
+      <% if !@active_session_neterminal.nil? %>
+          <div class="container">
+            <div class="alert alert-info ">
+              <div class="panel-title" style="display:inline;">Perioada de evaluare sesiune activa ani neterminali:
+                <b> <%= @active_session_neterminal.start_date.strftime('%d/%m/%y') %>
+                  - <%= @active_session_neterminal.end_date.strftime('%d/%m/%y') %></b>
+              </div>
+              <div style="display:inline; float:right">
+                <b> Mai sunt <%= (@active_session_neterminal.end_date - DateTime.now.to_date + 1).to_i %>
+                  zile! </b>
+              </div>
+            </div>
+          </div>
+      <% end %>
+      <div class="container">
+        <div class="content-narrow" id="error-div">
+          <%= render template: "layouts/_error_and_alert_div" %>
+        </div>
+      </div>
+
+      <%= form_tag create_active_user_path, class: 'form-signin' do %>
+          <legend>Autentificare</legend>
+          <input id="inputIcon" name="token" type="text" class="input-block-level" placeholder="Token" maxlength="35">
+          <button class="btn btn-large btn-block btn-primary" name="commit" type="submit">Autentificare</button>
+          <br>
+
+          <div align="center" style="color:#777;">
+            Pentru probleme de functionare a aplicatiei, trimiteti un mesaj la adresa
+            <a href="mailto:aplicatii@fmi.unibuc.ro" target="_top" class="btn-link">
+              aplicatii@fmi.unibuc.ro
+            </a>
+          </div>
+      <% end %>
+
+  <% end %>
+</div>

@@ -1,0 +1,62 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<% nr =0 %>
+<% @content.each_with_index do |section, index| %>
+    <% section.each_with_index do |parent, qindex| %>
+
+        <% if parent["label"] %>
+
+            <h3><%= parent["label"] %></h3>
+            <hr>
+
+        <% elsif parent["intrebare"] %>
+
+            <% if parent["intrebare"].first["enunt"] %>
+
+                <% enunt = parent["intrebare"].first["enunt"] %>
+                <% r = parent["intrebare"].drop 1 %>
+
+            <% else %>
+
+                <% r = parent["intrebare"] %>
+
+            <% end %>
+
+            <% if r.any? %>
+                <% if enunt %>
+                    <h4><%= enunt %></h4>
+                <% end %>
+                <% v = get_votes(@activity_results, nr+1, r.count) %>
+                <ul>
+
+                  <% r.each_with_index do |rasp, i| %>
+                      <li><%= "#{v[i+1]} voturi: #{rasp["rasp"]}" %>
+                        <% procent = v[i+1].to_i * 100 / @participants_no %>
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="<%= procent %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= procent %>%;">
+                            <%= procent %>%
+                          </div>
+                        </div>
+                      </li>
+                  <% end %>
+
+                </ul>
+                <% nr = nr + 1 %>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>

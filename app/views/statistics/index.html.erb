@@ -1,0 +1,98 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<div class="page-header">
+  <h1>Statistici</h1>
+  <hr/>
+  <%= link_to 'Descarca tot!', {:controller => "statistics", :action => "download_all" }, method: :get, class: 'btn btn-info' %>
+<hr/>
+  <%= link_to 'Descarca Raport pe grupe!', {:controller => "statistics", :action => "download_by_cohorts" }, method: :get, class: 'btn btn-info' %>
+
+</div>
+
+
+<div role="tabpanel">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#course" aria-controls="course" role="tab" data-toggle="tab">Materii</a>
+    </li>
+    <li role="presentation">
+      <a href="#teacher" aria-controls="teacher" role="tab" data-toggle="tab">Profesori</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="course">
+
+      <div class="table-responsive">
+
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+            <th>Denumire</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <% @courses.each do |course| %>
+              <tr>
+                <td>
+                  <%= course.title %>
+                </td>
+                <td>
+                  <a href="course_statistics/<%= course.id %>">vezi evaluari</a>
+                </td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="teacher">
+      <div class="table-responsive">
+
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+            <th>Nume</th>
+            <th>Prenume</th>
+            <th></th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% @teachers.each do |teacher| %>
+              <tr>
+
+                <td><%= teacher.last_name %></td>
+                <td><%= teacher.first_name %></td>
+                <td>
+                  <a href="teacher_statistics/<%= teacher.id %>">vezi evaluari</a>
+                </td>
+
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>

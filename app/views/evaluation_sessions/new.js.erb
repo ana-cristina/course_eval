@@ -1,0 +1,67 @@
+/*
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+*/
+
+$("#inner-session-modal-sm").html("<%= escape_javascript(render 'new') %>")
+$("#session-modal-small").modal("show")
+
+
+$(".start_period , .end_period").datepicker({
+    showOn: 'focus',
+    dateFormat: "dd-mm-yy",
+    buttonImageOnly: false
+});
+$(".start_period , .end_period")
+    .datepicker("setDate", Date.now());
+
+
+/*var checkbox = document.getElementById('evaluation_session_terminal');
+ var details_div = document.getElementById('for_terminal');
+
+ checkbox.onchange = function () {
+ if (this.checked) {
+ details_div.style['display'] = 'block';
+ } else {
+ details_div.style['display'] = 'none';
+ }
+ };*/
+var checkbox2 = document.getElementById('evaluation_session_from_upload');
+var details_div2 = document.getElementById('from_upload');
+checkbox2.onchange = function () {
+    if (this.checked) {
+        details_div2.style['display'] = 'block';
+    } else {
+        details_div2.style['display'] = 'none';
+    }
+};
+
+var checkbox3 = $('#evaluation_session_from_uploadL')[0];
+var details_div3 = $('#from_uploadL')[0];
+checkbox3.onchange = function () {
+    if (this.checked) {
+        details_div3.style['display'] = 'block';
+    } else {
+        details_div3.style['display'] = 'none';
+    }
+};
+var checkbox4 = $('#evaluation_session_from_uploadS')[0];
+var details_div4 = $('#from_uploadS')[0];
+checkbox4.onchange = function () {
+    if (this.checked) {
+        details_div4.style['display'] = 'block';
+    } else {
+        details_div4.style['display'] = 'none';
+    }
+};

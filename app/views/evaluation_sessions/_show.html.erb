@@ -1,0 +1,69 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<h2>Sesiune Activa</h2>
+<div class="well">
+  <div class="panel-title" style="display:inline;">Perioada de evaluare:
+    <b> <%= @active_session.start_date.strftime('%d/%m/%y') %>- <%= @active_session.end_date.strftime('%d/%m/%y') %></b>
+  </div>
+  <div style="display:inline; float:right">
+    <b> Mai sunt <%= (@active_session.end_date - @active_session.start_date).to_i %> zile! </b>
+  </div>
+</div>
+
+<div class="well">
+  Chestionar:  <%= link_to @active_session.form.title, @active_session.form, remote: true %>
+</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" style="width: 100%;">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Departament
+            <b class="caret"></b></a>
+          <ul class="dropdown-menu" value="departament" role="menu" aria-labelledby="drop2">
+
+            <li role="presentation"><a value="mate" style="text-align: left;">Matematica</a></li>
+            <li role="presentation"><a value="info" style="text-align: left;">Informatica</a></li>
+            <li role="presentation"><a value="tic" style="text-align: left;">TIC</a></li>
+            <li class="divider"></li>
+            <li role="presentation"><a value="clear" style="text-align: left;"> toate</a></li>
+          </ul>
+        </li>
+
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tip
+            <b class="caret"></b></a>
+          <ul class="dropdown-menu" value='tip' aria-labelledby="drop2">
+            <% ['curs', 'seminar', 'laborator'].each do |t| %>
+                <li>
+                  <a value="<%= t.first %>" style="text-align: left;"><%= t %></a>
+                </li>
+            <% end %>
+            <li class="divider"></li>
+            <li role="presentation"><a value="clear" style="text-align: left;"> toate</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>

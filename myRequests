@@ -1,0 +1,121 @@
+http://193.226.51.18:8888/api/V2/classes?oauth_token=1cb907b3da847bc00ca9b7b4ba71f7c5
+http://193.226.51.18:8888/api/V2/groups?oauth_token=1cb907b3da847bc00ca9b7b4ba71f7c5
+
+http://193.226.51.18:8888/api/V2/teachers?oauth_token=7b03cfe6ea30c5d700caae309a05447f
+
+http://193.226.51.18:8888/api/V2/classes?oauth_token=7b03cfe6ea30c5d700caae309a05447f
+
+
+http://193.226.51.18:8888/api/V2/teachers?oauth_token=7b03cfe6ea30c5d700caae309a05447f
+
+{
+   "status":"success",
+   "message":"Classes retrieved",
+   "data":[
+      {
+         "id":1,
+         "name":"Materie 1",
+         "class_type":"curs",
+         "credits":4
+      },
+      {
+         "id":2,
+         "name":"Materie 2",
+         "class_type":"curs",
+         "credits":4
+      },
+      {
+         "id":3,
+         "name":"Materie 3",
+         "class_type":"curs",
+         "credits":4
+      },
+      {
+         "id":4,
+         "name":"Materie 4",
+         "class_type":"curs",
+         "credits":4
+      },
+      {
+         "id":5,
+         "name":"Materie 5",
+         "class_type":"curs",
+         "credits":4
+      },
+      {
+         "id":6,
+         "name":"Materie 6",
+         "class_type":"curs",
+         "credits":4
+      },
+      {
+         "id":7,
+         "name":"Materie 7",
+         "class_type":"curs",
+         "credits":4
+      },
+      {
+         "id":8,
+         "name":"Materie 8",
+         "class_type":"curs",
+         "credits":4
+      },
+      {
+         "id":9,
+         "name":"Materie 9",
+         "class_type":"curs",
+         "credits":4
+      },
+      {
+         "id":10,
+         "name":"Materie 10",
+         "class_type":"curs",
+         "credits":4
+      }
+   ]
+}
+
+
+{
+   "status":"success",
+   "message":"Retrieved groups",
+   "data":{
+      "352":{
+         "id":6,
+         "numar_studenti":9,
+         "an":3,
+         "serie":5,
+         "specializare":"Matematica",
+         "domeniu":"Matematica",
+         "an_terminal":"DA"
+      },
+      "252":{
+         "id":8,
+         "numar_studenti":2,
+         "an":2,
+         "serie":5,
+         "specializare":"Matematica",
+         "domeniu":"Matematica",
+         "an_terminal":"NU"
+      },
+      "152":{
+         "id":10,
+         "numar_studenti":0,
+         "an":1,
+         "serie":5,
+         "specializare":"Matematica",
+         "domeniu":"Matematica",
+         "an_terminal":"NU"
+      },
+      "52":{
+         "id":7,
+         "numar_studenti":6,
+         "an":0,
+         "serie":5,
+         "specializare":"Matematica",
+         "domeniu":"Matematica",
+         "an_terminal":"NU"
+      }
+   }
+}
+About

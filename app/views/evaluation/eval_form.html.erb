@@ -1,0 +1,153 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<div class="container-narrow">
+  <div class="alert alert-info" align="center" style="color:#777;">
+    <h4>Pentru probleme de functionare a aplicatiei, trimiteti un mesaj la adresa
+      <a href="mailto:aplicatii@fmi.unibuc.ro" target="_top" class="btn-link">
+        aplicatii@fmi.unibuc.ro
+      </a></h4>
+  </div>
+
+  <div class="session-index">
+    <div id="main" role="main" class="block">
+      <h1><b>  <%= @activity.course.title %></b> </h1>
+      <h2><%= @activity.teacher.last_name %> <%= @activity.teacher.first_name %></h2>
+      <h3><i><%= @activity.activity_type %></i></h3>
+      <hr>
+      <br>
+
+      <div class="container">
+        <div class="stepwizard col-md-offset-3">
+          <div class="stepwizard-row setup-panel">
+            <div class="stepwizard-step">
+              <a href="#step-0" type="button" class="btn btn-primary btn-circle">1</a>
+              <p>Pas 1</p>
+            </div>
+            <% (1..@content.length).each do |i| %>
+                <div class="stepwizard-step">
+                  <a href="#step-<%= i %>" type="button" class="btn btn-default btn-circle" disabled="disabled"><%= i+1 %></a>
+                  <p>Pas <%= i+1 %></p>
+                </div>
+            <% end %>
+
+          </div>
+        </div>
+        <%= form_tag evaluate_activity_path(:activity_id => @activity.id), method: :post, remote: true do %>
+            <% qNr = 0 %>
+            <% @content.each_with_index do |sec, si| %>
+
+                <div class="row setup-content" id="step-<%= si %>">
+                  <div class="col-xs-8 col-md-offset-2">
+                    <div class="col-md-12">
+                      <% sec.each_with_index do |parent, qindex| %>
+
+                          <% if parent["label"] %>
+<!--label -> numele unei sectiuni; enunt - numele intrebarii -->
+
+                              <h4><%= parent["label"] %></h4>
+                              <hr>
+
+                          <% elsif parent["intrebare"] %>
+
+                              <% if parent["intrebare"].first["enunt"] %>
+
+                                  <h5><%= parent["intrebare"].first["enunt"] %>
+                                    <% r = parent["intrebare"].drop 1 %>
+                                    <% if r.any? %>
+                                        <b style="color:red">*</b>
+                                    <% end %>
+                                  </h5>
+                              <% else %>
+
+                                  <% r = parent["intrebare"] %>
+
+                              <% end %>
+
+                              <% if r.any? %>
+                                  <!-- in r am raspunsurile -->
+                                  <div class="btn-group" data-toggle-name="<%= qNr+1 %>" data-toggle="buttons-radio">
+
+                                    <% r.each_with_index do |rasp, i| %>
+                                        <button type="button" value="<%= i+1 %>" class="btn btn-default" data-toggle="button"><%= rasp["rasp"] %></button>
+                                    <% end %>
+
+                                  </div>
+                                  <input type="hidden" name="<%= qNr+1 %>" value="0"/>
+                                  <% qNr = qNr + 1 %>
+                              <% else %>
+                                  <textarea name="<%= qNr + 1 %>" style="width: 100%;"rows="10"></textarea>
+                                  <% qNr = qNr + 1 %>
+                              <% end %>
+                          <% end %>
+
+                      <% end %>
+                      <br><br>
+                      <ul class="pager">
+                      <% if si != 0 %>
+
+                          <li class="previous"> <a class="prevBtn">Inapoi</a>
+                           <!-- <button class="btn btn-primary prevBtn btn-sm pull-left" type="button">Inapoi</button>-->
+                          </li>
+                      <% end %>
+                      <% if si == @content.length-1 %>
+                            <li><%= submit_tag 'Salveaza', class: 'btn btn-primary nextBtn btn-sm pull-right'  %></li>
+                      <% else %>
+                            <li class="next"> <a class="nextBtn">Continua</a>
+                              <!--<button class="btn btn-primary nextBtn btn-sm pull-right" type="button">Continua</button>--></li>
+                      <% end %>
+                      </ul>
+
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+
+
+            <div class="row setup-content last-sec" id="step-<%= @content.length %>">
+              <div class="col-xs-6 col-md-offset-3">
+                <div class="col-md-12">
+                  <div class=" has-error errors">
+                    <br>
+                    <div style="margin: 1em;" class="alert alert-danger" role="alert">
+                      <h3>Nu ai completat toate intrebarile! </h3>
+                    </div>
+                    <br><br>
+                    <ul class="pager"> <li class="previous"> <a class="prevBtn last-back">Inapoi</a></li></ul>
+                    <!--<button class='btn btn-primary prevBtn btn-sm pull-left ' type='button'>Inapoi</button>-->
+                  </div>
+                  <div class=" no-error">
+
+                    <br><br><br>
+                    <div style="margin: 1em;" class="alert alert-success" role="alert">
+                      <h3> Ai terminat de completat formularul! Multumim!
+                        <a href="<%= evaluate_path %>" class="alert-link">Inapoi la lista de cursuri! </a></h3>
+                    </div>
+                    <br><br><br>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <input type="hidden" id="tpcp" name="tpcp"/>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%= javascript_include_tag 'wizard', 'data-turbolinks-track' => true %>

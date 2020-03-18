@@ -1,0 +1,92 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<%= form_for @activity, remote: true, html: {class: "form-horizontal", style: "display:inline;"} do |f| %>
+    <div class="modal-body">
+      <div class="panel-body">
+        <div class=" has-error errors">
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="form-group">
+          <label class="col-lg-5 control-label text-primary">Materie:</label>
+
+          <div class="col-lg-7">
+            <%= f.select :course_id, Course.all.collect { |p| [p.title, p.id] }, {selected: @activity.course_id, include_blank: true}, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-5 control-label text-primary">Profesor:</label>
+
+          <div class="col-lg-7">
+            <%= f.select :teacher_id, Teacher.order(:last_name).collect { |p| [p.last_name + ' ' + p.first_name, p.id] }, {selected: @activity.teacher_id, include_blank: true}, class: 'form-control' %>
+          </div>
+        </div>
+        <% if !@activity.persisted? %>
+            <div class="form-group alert alert-info">
+              <div>Pot fi selectate mai multe grupe.</div>
+            </div>
+        <% end %>
+        <div class="form-group">
+          <label class="col-lg-5 control-label text-primary">Grupa:</label>
+
+          <div class="col-lg-7">
+            <% if !@activity.persisted? %>
+                <%= f.select :cohorts, Cohort.order(:name).collect { |p| [p.name, p.id] }, {selected: @activity.cohort_id, include_blank: true}, :multiple => true, :size => 5, class: 'form-control' %>
+            <% else %>
+                <%= f.select :cohort_id, Cohort.order(:name).collect { |p| [p.name, p.id] }, {selected: @activity.cohort_id, include_blank: true}, class: 'form-control' %>
+            <% end %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-5 control-label text-primary" for="start_period">E Optional:</label>
+
+          <div class="col-lg-7">
+            <%= f.select(:is_optional, options_for_select([['NU', false], ['DA', true]], selected: @activity.is_optional), {include_blank: true}, {class: 'form-control'}) %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-5 control-label text-primary" for="start_period">Semestru:</label>
+
+          <div class="col-lg-7">
+            <%= f.select :semester, [['I', 1], ['II', 2]], {selected: @activity.semester, include_blank: true}, class: 'form-control' %>
+          </div>
+        </div>
+        <% if !@activity.persisted? %>
+            <div class="form-group alert alert-info">
+              <div>Pot fi selectate mai multe tipuri de activitate.</div>
+            </div>
+        <% end %>
+        <div class="form-group">
+          <label class="col-lg-5 control-label text-primary" for="start_period">Tipul activitatii:</label>
+
+          <div class="col-lg-7">
+            <% if !@activity.persisted? %>
+                <%= f.select :activities, options_for_select(['Curs', 'Seminar', 'Laborator', 'Proiect']), {selected: @activity.activity_type, include_blank: true}, :multiple => true, :size => 5, class: 'form-control' %>
+            <% else %>
+                <%= f.select(:activity_type, options_for_select(['Curs', 'Seminar', 'Laborator', 'Proiect'], selected: @activity.activity_type), {include_blank: true}, {class: 'form-control'}) %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <%= f.submit 'Salveaza', class: "btn btn-primary" %>
+      <%= link_to "Cancel", '', class: "btn btn-default", data: {dismiss: "modal"} %>
+    </div>
+<% end %>

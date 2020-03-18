@@ -1,0 +1,45 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Teachers</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @teachers.each do |teacher| %>
+      <tr>
+        <td><%= teacher.first_name %></td>
+        <td><%= teacher.last_name %></td>
+        <td><%= link_to 'Show', teacher %></td>
+        <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
+        <td><%= link_to 'Destroy', teacher, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Teacher', new_teacher_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  uid: MyString
+  activity_type: MyString
+  department: MyString
+  teacher_id: 1
+  teacher_full_name: MyString
+  evaluation_session_id: 
+
+two:
+  title: MyString
+  uid: MyString
+  activity_type: MyString
+  department: MyString
+  teacher_id: 1
+  teacher_full_name: MyString
+  evaluation_session_id: 

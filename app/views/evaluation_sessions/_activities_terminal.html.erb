@@ -1,0 +1,30 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<% @activities_terminal.each do |key, activities| %>
+    <tr>
+      <td>
+        <%= Course.find_by_id(key[0]).title %>
+      </td>
+      <td>
+        <% teacher = Teacher.find_by_id(key[1]) %>
+        <%= teacher.last_name %> <%= teacher.first_name %>
+      </td>
+      <td><%= key[2] %></td>
+      <td><%= link_to 'Vezi Evaluare', view_evaluation_path(:courseId => key[0], :teacherId => key[1], :type => key[2], :active_session => @active_session), remote: true, class: 'btn btn-info' %></td>
+      <td><%= link_to 'Descarca Comentarii', get_comments_path(:courseId => key[0], :teacherId => key[1], :type => key[2], :active_session => @active_session), class: 'btn btn-info' %></td>
+    </tr>
+<% end %>

@@ -1,0 +1,1240 @@
+{
+   "id":"a70fc007-e256-2a07-f791-79eeea884d16",
+   "name":"FMI_APIV2",
+   "description":"FMI-API V2",
+   "order":[
+      "8974e154-efe8-c3ad-a456-56c96d94a578"
+   ],
+   "folders":[
+      {
+         "id":"acb4355e-645c-e7d2-fb6f-ec62155dc9fd",
+         "name":"Auth",
+         "description":"",
+         "order":[
+            "40c1aabf-285a-e7f8-367d-ccfdebb95118"
+         ],
+         "owner":"502637"
+      },
+      {
+         "owner":"502637",
+         "lastUpdatedBy":"502637",
+         "lastRevision":217965887,
+         "id":"bac79999-d158-51d5-158f-4a49c61326c1",
+         "name":"Classes",
+         "description":"",
+         "order":[
+            "c33bd863-90d7-a3be-376e-58d1d7676b44"
+         ]
+      },
+      {
+         "owner":"502637",
+         "lastUpdatedBy":"502637",
+         "lastRevision":217965888,
+         "id":"56da606e-9d5e-8212-6143-2d8940f31e6a",
+         "name":"Courses",
+         "description":"",
+         "order":[
+            "af3f65d2-346c-18ef-f8c8-68319d3d52a8",
+            "2de6eef0-e5d0-ec0a-ceee-eb4127ac76b4",
+            "5719125a-df08-5499-7d5d-e342c48a6477"
+         ]
+      },
+      {
+         "owner":"502637",
+         "lastUpdatedBy":"502637",
+         "lastRevision":217965889,
+         "id":"8769893c-3612-5720-9447-1bbfe2d83865",
+         "name":"Groups",
+         "description":"",
+         "order":[
+            "78c6f5af-ed30-0e23-3604-e21575f112d5",
+            "1aba73e5-d446-2919-7555-da5081f92581"
+         ]
+      },
+      {
+         "owner":"502637",
+         "lastUpdatedBy":"502637",
+         "lastRevision":217965890,
+         "id":"ebf07549-feef-14b7-dc32-d4f0ee6d2053",
+         "name":"Results",
+         "description":"",
+         "order":[
+            "9c5b34b2-28cb-eca1-9a0a-4bbfc6156feb",
+            "0e311f32-0620-3d46-de5d-7c90db1b3058",
+            "87d35748-6f04-cd56-77af-ec21f6f4adf3",
+            "750b18de-7b62-6f23-0cd9-4651f0a7d47b",
+            "d363870e-3dcf-1f1b-12cf-4e88cf95e259"
+         ]
+      },
+      {
+         "owner":"502637",
+         "lastUpdatedBy":"502637",
+         "lastRevision":217965891,
+         "id":"8db570ca-c237-a5ab-ae09-48a8c24ed035",
+         "name":"Scholarships",
+         "description":"",
+         "order":[
+            "a891e68e-872c-a7e3-bdb9-ddcf9f417967",
+            "06921c10-28c5-86ea-1d8f-d8677ccfcb3c",
+            "553c2dce-3e79-c9b9-71ad-32bc89803829",
+            "4d401b6c-4454-5f1f-a62d-d4751fbc692a",
+            "6657dfe6-beb8-da73-db9c-45ee9f7b2545"
+         ]
+      },
+      {
+         "owner":"502637",
+         "lastUpdatedBy":"502637",
+         "lastRevision":219430342,
+         "id":"a769cb8b-a5c8-23ef-f84e-0f66c624ffb4",
+         "name":"Secretaries",
+         "description":"",
+         "order":[
+            "98a5eadf-0fd0-ebfe-df7d-76a2831804f3",
+            "9e4781bd-98c1-8c9f-1058-3c80037f4b37",
+            "7375c215-42c9-ddc3-ae29-48a024aa5107",
+            "6c507e9e-b9b0-0c75-8b5c-0cf5b59dfb06",
+            "ee440c84-ba45-eb17-8120-7c6d685c21c3"
+         ]
+      },
+      {
+         "owner":"502637",
+         "lastUpdatedBy":"502637",
+         "lastRevision":229948627,
+         "id":"17804e67-e0b9-3b0f-b845-1be5cd18b7fc",
+         "name":"SecretaryGroups",
+         "description":"",
+         "order":[
+            "6d69d1f8-26a9-0c62-28bf-bf7aada1d5db",
+            "5cf8cf55-6e19-5dc8-1a3a-3ab9d8b5abed"
+         ]
+      },
+      {
+         "owner":"502637",
+         "lastUpdatedBy":"502637",
+         "lastRevision":229948439,
+         "id":"1e5ace84-dd11-dc1e-05b5-2e552818d70f",
+         "name":"StudentGroups",
+         "description":"",
+         "order":[
+            "05717ed1-a54d-37f9-5078-72f6bfd75802",
+            "27ea68a0-bfbb-a122-bd5b-6b6e715cfb16"
+         ]
+      },
+      {
+         "owner":"502637",
+         "lastUpdatedBy":"502637",
+         "lastRevision":217965892,
+         "id":"5fa3e105-3fc0-2cac-4ee7-002dd36f9afa",
+         "name":"Students",
+         "description":"",
+         "order":[
+            "7a65a44a-e5c8-4bac-513a-41fdc3c6ab56",
+            "5a8b8fab-c3b9-e67e-7a60-fb09a421d160",
+            "0700a5bd-d15d-c77f-391d-ccf437cf8f07",
+            "511b466a-8696-e54e-c830-02c4357a9e6b",
+            "9b98e3ce-5b5f-b5a7-3784-7e7d55f448af",
+            "2384741d-3793-e6a6-72ea-929bd43e1933",
+            "a866a713-f1fe-ac86-9526-16b6369bbf28",
+            "45c38763-59c1-d6af-0d44-d554920870ff",
+            "7e2b322c-ea10-54df-d0eb-422f94d2f199",
+            "c7cc2b65-11cb-8a31-f78a-2b9ac0acfe2d",
+            "bbef2d2f-77e6-7542-8f58-c8120b2bc585"
+         ]
+      },
+      {
+         "owner":"502637",
+         "lastUpdatedBy":"502637",
+         "lastRevision":217965893,
+         "id":"bb54e44e-e82e-9aec-d722-2c5c62cadbb4",
+         "name":"Teachers",
+         "description":"",
+         "order":[
+            "a21846f6-d8d9-43ed-d8c8-719fbd3c3a5e",
+            "5e30be33-fefc-6b01-be94-ceaca0ec7caf",
+            "2d59011b-d1e8-4e82-8020-92ba13b30c4c"
+         ]
+      }
+   ],
+   "timestamp":0,
+   "owner":"502637",
+   "public":false,
+   "requests":[
+      {
+         "folder":"1e5ace84-dd11-dc1e-05b5-2e552818d70f",
+         "id":"05717ed1-a54d-37f9-5078-72f6bfd75802",
+         "name":"student_groups - attach",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"student_id\": 51,\n    \"group_id\": 1\n}",
+         "descriptionFormat":"html",
+         "description":"",
+         "headers":"Content-Type: application\/json\n",
+         "method":"POST",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/student_groups?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"8db570ca-c237-a5ab-ae09-48a8c24ed035",
+         "id":"06921c10-28c5-86ea-1d8f-d8677ccfcb3c",
+         "name":"scholarships\/:student_id",
+         "dataMode":"params",
+         "data":[
+            ""
+         ],
+         "rawModeData":null,
+         "descriptionFormat":null,
+         "description":"scholarships for student",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/scholarships\/3?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"5fa3e105-3fc0-2cac-4ee7-002dd36f9afa",
+         "id":"0700a5bd-d15d-c77f-391d-ccf437cf8f07",
+         "name":"students\/:id",
+         "dataMode":"params",
+         "data":[
+
+         ],
+         "rawModeData":null,
+         "descriptionFormat":null,
+         "description":"",
+         "headers":"",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/students\/44?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"ebf07549-feef-14b7-dc32-d4f0ee6d2053",
+         "id":"0e311f32-0620-3d46-de5d-7c90db1b3058",
+         "name":"results\/:student_id\/average",
+         "dataMode":"params",
+         "data":[
+            ""
+         ],
+         "rawModeData":null,
+         "descriptionFormat":null,
+         "description":"Get student results",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/results\/45\/average?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"8769893c-3612-5720-9447-1bbfe2d83865",
+         "id":"1aba73e5-d446-2919-7555-da5081f92581",
+         "name":"groups\/:number",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"oauth_token\": \"1876536a84f5193efad05b0f74d96fb5\",\n    \"student\": {\n     \"first_name\": \"First name\",\n     \"last_name\": \"Johnny\",\n     \"cnp\": \"193xxxxxxxxxx\",\n     \"ic_serie\": \"px\",\n     \"ic_number\": \"08xxxx\",\n     \"email\": \"student@fmi.unibuc.ro\"\n    }\n}",
+         "descriptionFormat":null,
+         "description":"Lists all groups",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/groups\/243?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"5fa3e105-3fc0-2cac-4ee7-002dd36f9afa",
+         "id":"2384741d-3793-e6a6-72ea-929bd43e1933",
+         "name":"students\/by_year\/:year\/by_series\/:series",
+         "dataMode":"params",
+         "data":[
+
+         ],
+         "rawModeData":null,
+         "descriptionFormat":"html",
+         "description":"",
+         "headers":"",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/students\/by_year\/1\/by_series\/1?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"1e5ace84-dd11-dc1e-05b5-2e552818d70f",
+         "id":"27ea68a0-bfbb-a122-bd5b-6b6e715cfb16",
+         "name":"student_groups - remove",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"student_id\": 51,\n    \"group_id\": 1\n}",
+         "descriptionFormat":"html",
+         "description":"",
+         "headers":"Content-Type: application\/json\n",
+         "method":"DELETE",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/student_groups?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"bb54e44e-e82e-9aec-d722-2c5c62cadbb4",
+         "id":"2d59011b-d1e8-4e82-8020-92ba13b30c4c",
+         "name":"teachers\/user\/:id",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"oauth_token\": \"1876536a84f5193efad05b0f74d96fb5\",\n    \"student\": {\n     \"first_name\": \"First name\",\n     \"last_name\": \"Johnny\",\n     \"cnp\": \"193xxxxxxxxxx\",\n     \"ic_serie\": \"px\",\n     \"ic_number\": \"08xxxx\",\n     \"email\": \"student@fmi.unibuc.ro\"\n    }\n}",
+         "descriptionFormat":"html",
+         "description":"Show teacher data",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/teachers\/user\/70?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"56da606e-9d5e-8212-6143-2d8940f31e6a",
+         "id":"2de6eef0-e5d0-ec0a-ceee-eb4127ac76b4",
+         "name":"courses\/",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"teacher_id\": 1,\n    \"course_id\": 1,\n    \"course_type\": 1,\n    \"group_id\": 1\n}",
+         "descriptionFormat":null,
+         "description":"Create course for teacher",
+         "headers":"Content-Type: application\/json\n",
+         "method":"POST",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/courses?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "id":"40c1aabf-285a-e7f8-367d-ccfdebb95118",
+         "headers":"",
+         "url":"http:\/\/193.226.51.18:8888\/api\/V2\/auth",
+         "preRequestScript":null,
+         "pathVariables":[
+
+         ],
+         "method":"POST",
+         "data":[
+            {
+               "key":"username",
+               "value":"c0f45@example.com",
+               "type":"text",
+               "enabled":true
+            },
+            {
+               "key":"password",
+               "value":"foobar",
+               "type":"text",
+               "enabled":true
+            }
+         ],
+         "dataMode":"params",
+         "tests":null,
+         "currentHelper":"normal",
+         "helperAttributes":[
+
+         ],
+         "time":1478984435785,
+         "name":"http:\/\/localhost:3000\/api\/V2\/auth",
+         "description":"Authentication",
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16",
+         "responses":[
+
+         ]
+      },
+      {
+         "folder":"5fa3e105-3fc0-2cac-4ee7-002dd36f9afa",
+         "id":"45c38763-59c1-d6af-0d44-d554920870ff",
+         "name":"students",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"oauth_token\": \"1876536a84f5193efad05b0f74d96fb5\",\n    \"student\": {\n     \"first_name\": \"First name\",\n     \"last_name\": \"Last name\",\n     \"cnp\": \"165xxx3xxxxxx\",\n     \"ic_serie\": \"px\",\n     \"ic_number\": \"08xxxx\",\n     \"email\": \"student2413@fmi.unibuc.ro\",\n     \"date_birth\": \"12\/02\/1993\",\n     \"address\": \"Edgar Quinet, 09\",\n     \"phone_number\": \"0722xxxxxxx\",\n     \"gender\": \"M\",\n     \"father_first_name\": \"Gigi\",\n     \"maiden_name\": \"M.\",\n     \"mother_first_name\": \"Gigica\",\n     \"place_birth\": \"Bucuresti\",\n     \"nationality\": \"RO\",\n     \"iban\": \"RZBR000000001000XXXX\",\n     \"frequency\": \"IFR\",\n     \"is_responsable\": 0,\n     \"is_exchange\": 0,\n     \"class_year\": 1,\n     \"status\": \"?? Status\",\n     \"git_user\": \"@someone\",\n     \"git_token\": null,\n     \"average_grade\": 7.87,\n     \"credits\": 0,\n     \"pending\": \"true\"\n    }\n}",
+         "descriptionFormat":null,
+         "description":"Create a student",
+         "headers":"Content-Type: application\/json\n",
+         "method":"POST",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/students",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"8db570ca-c237-a5ab-ae09-48a8c24ed035",
+         "id":"4d401b6c-4454-5f1f-a62d-d4751fbc692a",
+         "name":"scholarshipstypes",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"name\": \"Scholarship name\",\n    \"months_number\": 3\n}",
+         "descriptionFormat":null,
+         "description":"create scholarship type",
+         "headers":"Content-Type: application\/json\n",
+         "method":"POST",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/scholarshiptypes?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"5fa3e105-3fc0-2cac-4ee7-002dd36f9afa",
+         "id":"511b466a-8696-e54e-c830-02c4357a9e6b",
+         "name":"students\/:id\/admission",
+         "dataMode":"params",
+         "data":[
+
+         ],
+         "rawModeData":null,
+         "descriptionFormat":"html",
+         "description":"",
+         "headers":"",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/students\/8\/admission?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"8db570ca-c237-a5ab-ae09-48a8c24ed035",
+         "id":"553c2dce-3e79-c9b9-71ad-32bc89803829",
+         "name":"scholarshiptypes",
+         "dataMode":"params",
+         "data":[
+            ""
+         ],
+         "rawModeData":null,
+         "descriptionFormat":null,
+         "description":"scholarships types",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/scholarshiptypes?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"56da606e-9d5e-8212-6143-2d8940f31e6a",
+         "id":"5719125a-df08-5499-7d5d-e342c48a6477",
+         "name":"courses\/batch",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"courses_teachers\": [{\n        \"teacher_id\": 51,\n        \"course_id\": 1,\n        \"course_type\": 1,\n        \"group_id\": 1    \n    }]\n}",
+         "descriptionFormat":null,
+         "description":"Create course for teacher",
+         "headers":"Content-Type: application\/json\n",
+         "method":"POST",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/courses\/batch?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"5fa3e105-3fc0-2cac-4ee7-002dd36f9afa",
+         "id":"5a8b8fab-c3b9-e67e-7a60-fb09a421d160",
+         "name":"students\/count",
+         "dataMode":"params",
+         "data":[
+
+         ],
+         "rawModeData":null,
+         "descriptionFormat":null,
+         "description":"",
+         "headers":"",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/students\/count?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"17804e67-e0b9-3b0f-b845-1be5cd18b7fc",
+         "id":"5cf8cf55-6e19-5dc8-1a3a-3ab9d8b5abed",
+         "name":"secretary_groups - remove",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"secretary_id\": 2,\n    \"group_id\": 1\n}",
+         "descriptionFormat":"html",
+         "description":"",
+         "headers":"Content-Type: application\/json\n",
+         "method":"DELETE",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/secretary_groups?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"bb54e44e-e82e-9aec-d722-2c5c62cadbb4",
+         "id":"5e30be33-fefc-6b01-be94-ceaca0ec7caf",
+         "name":"teachers\/:id",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"oauth_token\": \"1876536a84f5193efad05b0f74d96fb5\",\n    \"student\": {\n     \"first_name\": \"First name\",\n     \"last_name\": \"Johnny\",\n     \"cnp\": \"193xxxxxxxxxx\",\n     \"ic_serie\": \"px\",\n     \"ic_number\": \"08xxxx\",\n     \"email\": \"student@fmi.unibuc.ro\"\n    }\n}",
+         "descriptionFormat":null,
+         "description":"Show teacher data",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/teachers\/1?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"8db570ca-c237-a5ab-ae09-48a8c24ed035",
+         "id":"6657dfe6-beb8-da73-db9c-45ee9f7b2545",
+         "name":"scholarships",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"student_id\": 3,\n    \"start_date\": \"12\/04\/2016\",\n    \"scholarship_type_id\": 1\n}",
+         "descriptionFormat":null,
+         "description":"create scholarship",
+         "headers":"Content-Type: application\/json\n",
+         "method":"POST",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/scholarships?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"a769cb8b-a5c8-23ef-f84e-0f66c624ffb4",
+         "id":"6c507e9e-b9b0-0c75-8b5c-0cf5b59dfb06",
+         "name":"secretaries",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"user\": {\n        \"skip_validations\": true,\n        \"first_name\": \"Secretara\",\n        \"last_name\": \"Info\",\n        \"email\": \"secretara2@fmi.unibuc.ro\",\n        \"phone_number\": \"12345\",\n        \"password\": \"parolamea\"\n    },\n    \"groups\": [4,5]\n}",
+         "descriptionFormat":"html",
+         "description":"Delete secretary",
+         "headers":"Content-Type: application\/json\n",
+         "method":"DELETE",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/secretaries\/7?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"17804e67-e0b9-3b0f-b845-1be5cd18b7fc",
+         "id":"6d69d1f8-26a9-0c62-28bf-bf7aada1d5db",
+         "name":"secretary_groups - attach",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"secretary_id\": 2,\n    \"group_id\": 1\n}",
+         "descriptionFormat":"html",
+         "description":"",
+         "headers":"Content-Type: application\/json\n",
+         "method":"POST",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/secretary_groups?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"a769cb8b-a5c8-23ef-f84e-0f66c624ffb4",
+         "id":"7375c215-42c9-ddc3-ae29-48a024aa5107",
+         "name":"secretaries",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"user\": {\n        \"skip_validations\": true,\n        \"first_name\": \"Secretara\",\n        \"last_name\": \"Info\",\n        \"email\": \"secretara@fmi.unibuc.ro\",\n        \"iban\": \"abc\",\n        \"ic_number\": \"123123\",\n        \"phone_number\": \"12345\",\n        \"password\": \"parolamea\"\n    },\n    \"groups\": [1,2]\n}",
+         "descriptionFormat":"html",
+         "description":"Create secretary",
+         "headers":"Content-Type: application\/json\n",
+         "method":"POST",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/secretaries?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"ebf07549-feef-14b7-dc32-d4f0ee6d2053",
+         "id":"750b18de-7b62-6f23-0cd9-4651f0a7d47b",
+         "name":"results\/bulk",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"student_results\": [\n        {\n            \"grade\": 9.50,\n            \"student_id\": 9,\n            \"course_id\": 1,\n            \"academic_year\": \"2015-2016\"\n        },\n        {\n            \"grade\": 10.0,\n            \"student_id\": 10,\n            \"course_id\": 2,\n            \"academic_year\": \"2015-2016\"\n        }\n    ]\n}",
+         "descriptionFormat":null,
+         "description":"Put student results in",
+         "headers":"Content-Type: application\/json\n",
+         "method":"POST",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/results\/bulk?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"8769893c-3612-5720-9447-1bbfe2d83865",
+         "id":"78c6f5af-ed30-0e23-3604-e21575f112d5",
+         "name":"groups",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"oauth_token\": \"1876536a84f5193efad05b0f74d96fb5\",\n    \"student\": {\n     \"first_name\": \"First name\",\n     \"last_name\": \"Johnny\",\n     \"cnp\": \"193xxxxxxxxxx\",\n     \"ic_serie\": \"px\",\n     \"ic_number\": \"08xxxx\",\n     \"email\": \"student@fmi.unibuc.ro\"\n    }\n}",
+         "descriptionFormat":null,
+         "description":"Lists all groups",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/groups?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"5fa3e105-3fc0-2cac-4ee7-002dd36f9afa",
+         "id":"7a65a44a-e5c8-4bac-513a-41fdc3c6ab56",
+         "name":"students\/get",
+         "dataMode":"params",
+         "data":[
+
+         ],
+         "rawModeData":null,
+         "descriptionFormat":"html",
+         "description":"Get all students",
+         "headers":"",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/students?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"5fa3e105-3fc0-2cac-4ee7-002dd36f9afa",
+         "id":"7e2b322c-ea10-54df-d0eb-422f94d2f199",
+         "name":"students\/bulk",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"oauth_token\": \"1876536a84f5193efad05b0f74d96fb5\",\n    \"students\": [{\n     \"first_name\": \"First name\",\n     \"last_name\": \"Last name\",\n     \"cnp\": \"193xxxxxxxxxx\",\n     \"ic_serie\": \"px\",\n     \"ic_number\": \"08xxxx\",\n     \"email\": \"student1@fmi.unibuc.ro\",\n     \"date_birth\": \"12\/02\/1993\",\n     \"address\": \"Edgar Quinet, 09\",\n     \"phone_number\": \"0722xxxxxxx\",\n     \"gender\": \"M\",\n     \"father_first_name\": \"Gigi\",\n     \"maiden_name\": \"M.\",\n     \"mother_first_name\": \"Gigica\",\n     \"place_birth\": \"Bucuresti\",\n     \"nationality\": \"RO\",\n     \"iban\": \"RZBR000000001000XXXX\",\n     \"frequency\": \"IFR\",\n     \"is_responsable\": 0,\n     \"is_exchange\": 0,\n     \"class_year\": 1,\n     \"status\": \"?? Status\",\n     \"git_user\": \"@someone\",\n     \"git_token\": null,\n     \"average_grade\": 7.87,\n     \"credits\": 0,\n     \"pending\": \"true\"\n    }]\n}",
+         "descriptionFormat":null,
+         "description":"Create multiple students",
+         "headers":"Content-Type: application\/json\n",
+         "method":"POST",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/students\/bulk",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"ebf07549-feef-14b7-dc32-d4f0ee6d2053",
+         "id":"87d35748-6f04-cd56-77af-ec21f6f4adf3",
+         "name":"results",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"grade\": 9.43,\n    \"student_id\": 8,\n    \"course_id\": 1,\n    \"academic_year\": \"2015-2016\"\n}",
+         "descriptionFormat":null,
+         "description":"Put student results in",
+         "headers":"Content-Type: application\/json\n",
+         "method":"POST",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/results?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":null,
+         "id":"8974e154-efe8-c3ad-a456-56c96d94a578",
+         "name":"students\/:id\/scholarsip_info",
+         "dataMode":"params",
+         "data":[
+
+         ],
+         "rawModeData":null,
+         "descriptionFormat":null,
+         "description":"",
+         "headers":"",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/students\/51\/scholarsip_info?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"a769cb8b-a5c8-23ef-f84e-0f66c624ffb4",
+         "id":"98a5eadf-0fd0-ebfe-df7d-76a2831804f3",
+         "name":"secretaries",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"student_id\": 3,\n    \"start_date\": \"12\/04\/2016\",\n    \"scholarship_type_id\": 1\n}",
+         "descriptionFormat":"html",
+         "description":"List all secretaries",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/secretaries?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"5fa3e105-3fc0-2cac-4ee7-002dd36f9afa",
+         "id":"9b98e3ce-5b5f-b5a7-3784-7e7d55f448af",
+         "name":"students\/by_year\/:year",
+         "dataMode":"params",
+         "data":[
+
+         ],
+         "rawModeData":null,
+         "descriptionFormat":null,
+         "description":"",
+         "headers":"",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/students\/by_year\/1?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"ebf07549-feef-14b7-dc32-d4f0ee6d2053",
+         "id":"9c5b34b2-28cb-eca1-9a0a-4bbfc6156feb",
+         "name":"results\/:student_id",
+         "dataMode":"params",
+         "data":[
+            ""
+         ],
+         "rawModeData":null,
+         "descriptionFormat":null,
+         "description":"Get student results",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/results\/45?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"a769cb8b-a5c8-23ef-f84e-0f66c624ffb4",
+         "id":"9e4781bd-98c1-8c9f-1058-3c80037f4b37",
+         "name":"secretaries\/:id",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"student_id\": 3,\n    \"start_date\": \"12\/04\/2016\",\n    \"scholarship_type_id\": 1\n}",
+         "descriptionFormat":"html",
+         "description":"Find secretary",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/secretaries\/9?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"bb54e44e-e82e-9aec-d722-2c5c62cadbb4",
+         "id":"a21846f6-d8d9-43ed-d8c8-719fbd3c3a5e",
+         "name":"teachers",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"oauth_token\": \"1876536a84f5193efad05b0f74d96fb5\",\n    \"student\": {\n     \"first_name\": \"First name\",\n     \"last_name\": \"Johnny\",\n     \"cnp\": \"193xxxxxxxxxx\",\n     \"ic_serie\": \"px\",\n     \"ic_number\": \"08xxxx\",\n     \"email\": \"student@fmi.unibuc.ro\"\n    }\n}",
+         "descriptionFormat":null,
+         "description":"Get all teachers",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/teachers?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"5fa3e105-3fc0-2cac-4ee7-002dd36f9afa",
+         "id":"a866a713-f1fe-ac86-9526-16b6369bbf28",
+         "name":"students\/by_year\/:year\/by_series\/:series\/by_group\/:group",
+         "dataMode":"params",
+         "data":[
+
+         ],
+         "rawModeData":null,
+         "descriptionFormat":"html",
+         "description":"",
+         "headers":"",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/students\/by_year\/1\/by_series\/1\/by_group\/1?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"8db570ca-c237-a5ab-ae09-48a8c24ed035",
+         "id":"a891e68e-872c-a7e3-bdb9-ddcf9f417967",
+         "name":"scholarships",
+         "dataMode":"params",
+         "data":[
+            ""
+         ],
+         "rawModeData":null,
+         "descriptionFormat":null,
+         "description":"scholarships",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/scholarships?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"56da606e-9d5e-8212-6143-2d8940f31e6a",
+         "id":"af3f65d2-346c-18ef-f8c8-68319d3d52a8",
+         "name":"courses\/:teacher_id",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"oauth_token\": \"1876536a84f5193efad05b0f74d96fb5\",\n    \"student\": {\n     \"first_name\": \"First name\",\n     \"last_name\": \"Johnny\",\n     \"cnp\": \"193xxxxxxxxxx\",\n     \"ic_serie\": \"px\",\n     \"ic_number\": \"08xxxx\",\n     \"email\": \"student@fmi.unibuc.ro\"\n    }\n}",
+         "descriptionFormat":null,
+         "description":"Lists all groups",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/courses\/51?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"tests[\"Status code is 200\"] = responseCode.code === 200;\n\n\nvar jsonData = JSON.parse(responseBody);\n\ntests[\"Body is correct\"] = responseBody === '{\"status\":\"success\",\"message\":\"Retrieved teacher courses\",\"data\":[{\"course_id\":1,\"course_name\":\"Course - Name\",\"course_type\":\"curs\",\"group_id\":1},{\"course_id\":1,\"course_name\":\"Course - Name\",\"course_type\":\"curs\",\"group_id\":1},{\"course_id\":1,\"course_name\":\"Course - Name\",\"course_type\":\"curs\",\"group_id\":1},{\"course_id\":1,\"course_name\":\"Course - Name\",\"course_type\":\"curs\",\"group_id\":1},{\"course_id\":1,\"course_name\":\"Course - Name\",\"course_type\":\"curs\",\"group_id\":1},{\"course_id\":2,\"course_name\":\"Course - Name\",\"course_type\":\"curs\",\"group_id\":2}]}';",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"5fa3e105-3fc0-2cac-4ee7-002dd36f9afa",
+         "id":"bbef2d2f-77e6-7542-8f58-c8120b2bc585",
+         "name":"students\/all",
+         "dataMode":"params",
+         "data":[
+
+         ],
+         "rawModeData":null,
+         "descriptionFormat":"html",
+         "description":"",
+         "headers":"",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/students\/all?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"bac79999-d158-51d5-158f-4a49c61326c1",
+         "id":"c33bd863-90d7-a3be-376e-58d1d7676b44",
+         "name":"classes",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"oauth_token\": \"1876536a84f5193efad05b0f74d96fb5\",\n    \"student\": {\n     \"first_name\": \"First name\",\n     \"last_name\": \"Johnny\",\n     \"cnp\": \"193xxxxxxxxxx\",\n     \"ic_serie\": \"px\",\n     \"ic_number\": \"08xxxx\",\n     \"email\": \"student@fmi.unibuc.ro\"\n    }\n}",
+         "descriptionFormat":null,
+         "description":"Lists all groups",
+         "headers":"Content-Type: application\/json\n",
+         "method":"GET",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/classes?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"tests[\"Status code is 200\"] = responseCode.code === 200;\n\n\nvar jsonData = JSON.parse(responseBody);\n\ntests[\"Body is correct\"] = responseBody === '{\"status\":\"success\",\"message\":\"Classes retrieved\",\"data\":[{\"id\":1,\"name\":\"Course - Name\",\"class_type\":\"curs\",\"credits\":4},{\"id\":2,\"name\":\"Course - Name\",\"class_type\":\"curs\",\"credits\":4},{\"id\":3,\"name\":\"Course - Name\",\"class_type\":\"curs\",\"credits\":4},{\"id\":4,\"name\":\"Course - Name\",\"class_type\":\"curs\",\"credits\":4},{\"id\":5,\"name\":\"Course - Name\",\"class_type\":\"curs\",\"credits\":4},{\"id\":6,\"name\":\"Course - Name\",\"class_type\":\"curs\",\"credits\":4},{\"id\":7,\"name\":\"Course - Name\",\"class_type\":\"curs\",\"credits\":4},{\"id\":8,\"name\":\"Course - Name\",\"class_type\":\"curs\",\"credits\":4},{\"id\":9,\"name\":\"Course - Name\",\"class_type\":\"curs\",\"credits\":4},{\"id\":10,\"name\":\"Course - Name\",\"class_type\":\"curs\",\"credits\":4}]}';",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"5fa3e105-3fc0-2cac-4ee7-002dd36f9afa",
+         "id":"c7cc2b65-11cb-8a31-f78a-2b9ac0acfe2d",
+         "name":"students",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"oauth_token\": \"1876536a84f5193efad05b0f74d96fb5\",\n    \"student\": {\n     \"first_name\": \"First name\",\n     \"last_name\": \"Johnny\",\n     \"cnp\": \"193xxxxxxxxxx\",\n     \"ic_serie\": \"px\",\n     \"ic_number\": \"08xxxx\",\n     \"email\": \"student@fmi.unibuc.ro\"\n    }\n}",
+         "descriptionFormat":null,
+         "description":"Update student",
+         "headers":"Content-Type: application\/json\n",
+         "method":"PUT",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/students\/52",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"ebf07549-feef-14b7-dc32-d4f0ee6d2053",
+         "id":"d363870e-3dcf-1f1b-12cf-4e88cf95e259",
+         "name":"results",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"grade\": 9.99,\n    \"student_id\": 3,\n    \"course_id\": 1,\n    \"academic_year\": \"2015-2016\"\n}",
+         "descriptionFormat":null,
+         "description":"Update student results",
+         "headers":"Content-Type: application\/json\n",
+         "method":"PUT",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/results?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      },
+      {
+         "folder":"a769cb8b-a5c8-23ef-f84e-0f66c624ffb4",
+         "id":"ee440c84-ba45-eb17-8120-7c6d685c21c3",
+         "name":"secretaries\/:id",
+         "dataMode":"raw",
+         "data":[
+
+         ],
+         "rawModeData":"{\n    \"user\": {\n        \"skip_validations\": true,\n        \"first_name\": \"Secretara\",\n        \"last_name\": \"Info\",\n        \"email\": \"secretara2@fmi.unibuc.ro\",\n        \"phone_number\": \"12345\",\n        \"password\": \"parolamea\"\n    },\n    \"groups\": [1,3,5]\n}",
+         "descriptionFormat":"html",
+         "description":"Update",
+         "headers":"Content-Type: application\/json\n",
+         "method":"PUT",
+         "pathVariables":[
+
+         ],
+         "url":"http:\/\/localhost:3000\/api\/V2\/secretaries\/8?oauth_token=1876536a84f5193efad05b0f74d96fb5",
+         "preRequestScript":null,
+         "tests":"",
+         "currentHelper":"normal",
+         "helperAttributes":"{}",
+         "responses":[
+
+         ],
+         "collectionId":"a70fc007-e256-2a07-f791-79eeea884d16"
+      }
+   ]
+}

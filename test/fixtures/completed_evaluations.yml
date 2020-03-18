@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course_id: 
+  incognito_token: MyString
+  content: MyText
+  time: 1
+  date: 2015-03-29 16:59:39
+
+two:
+  course_id: 
+  incognito_token: MyString
+  content: MyText
+  time: 1
+  date: 2015-03-29 16:59:39

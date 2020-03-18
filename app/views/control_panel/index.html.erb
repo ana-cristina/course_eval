@@ -1,0 +1,86 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<div class="page-header"><h3>Setari</h3></div>
+
+<div >
+
+  <ul class="nav nav-tabs" >
+    <li class="<%= 'active' if @tab == 'activities' %>">
+      <%= link_to 'Activitati', control_panel_path(:tab=>'activities'), method: :get,  class: 'btn btn-default'  %>
+    </li>
+    <li role="presentation" class="<%= 'active' if @tab == 'departments' %>" >
+      <%= link_to 'Departamente', control_panel_path(:tab=>'departments'), method: :get,  class: 'btn btn-default'  %>
+    </li>
+    <li role="presentation" class="<%= 'active' if @tab == 'courses' %>">
+      <%= link_to 'Materii', control_panel_path(:tab=>'courses'), method: :get,  class: 'btn btn-default'  %>
+    </li>
+    </li>
+    <li role="presentation" class="<%= 'active' if @tab == 'teachers' %>">
+      <%= link_to 'Profesori', control_panel_path(:tab=>'teachers'), method: :get,  class: 'btn btn-default'  %>
+    </li>
+    </li>
+    <li role="presentation" class="<%= 'active' if @tab == 'cohorts' %>">
+      <%= link_to 'Grupe', control_panel_path(:tab=>'cohorts'), method: :get,  class: 'btn btn-default'  %>
+    </li>
+    <li role="presentation" class="<%= 'active' if @tab == 'current' %>">
+      <%= link_to 'Activitati din sesiunea curenta', control_panel_path(:tab=>'current'), method: :get,  class: 'btn btn-default'  %>
+    </li>
+  </ul>
+  <!-- Tab panes -->
+  <div >
+
+    <% if @tab == 'activities' %>
+    <div  class="tab-pane active" id="activities">
+      <div class="activities-index">
+        <%= render 'activities/index'%>
+      </div>
+    </div>
+        <% elsif @tab == 'departments' %>
+    <div class="tab-pane active" id="deps">
+      <div class="departments-index">
+        <%= render 'departments/index' %>
+      </div>
+
+    </div>
+    <% elsif @tab == 'courses' %>
+    <div class="tab-pane active" id="courses">
+      <div class="courses-index">
+        <%= render 'courses/index' %>
+      </div>
+    </div>
+    <% elsif @tab =='teachers' %>
+    <div  class="tab-pane active" id="teachers">
+      <div class="teachers-index">
+        <%= render 'teachers/index' %>
+      </div>
+    </div>
+    <% elsif @tab == 'cohorts' %>
+    <div class="tab-pane active" id="cohorts">
+      <div class="cohorts-index">
+        <%= render 'cohorts/index' %>
+      </div>
+    </div>
+    <% elsif @tab == 'current' %>
+
+    <div class="tab-pane active" id="cohorts">
+      <div class="activities-current">
+        <%= render 'activities/current' %>
+      </div>
+    </div>
+        <% end %>
+  </div>
+</div>

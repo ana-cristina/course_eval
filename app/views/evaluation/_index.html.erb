@@ -1,0 +1,119 @@
+<!--
+Copyright (c) 2015 - 2020 Ana-Cristina Turlea <turleaana@gmail.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<div class="well">
+  <div class="table-responsive">
+    <h3>Cursuri obligatorii</h3>
+    <% @mandatories.each do |man| %>
+        <h4> <%= man[:course].title %> </h4>
+
+        <table class="table table-striped table-hover ">
+          <thead>
+          <tr>
+            <th>Profesor</th>
+            <th>Tip</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody class="session-index">
+
+          <% man[:activities].each do |activity| %>
+
+              <tr>
+
+                <td class="col-md-8">
+                  <%= activity.teacher.last_name %> <%= activity.teacher.first_name %>
+                </td>
+                <td class="col-md-2">
+                  <%= activity.activity_type %>
+                </td>
+                <td class="col-md-2">
+                  <% if activity.completed(@current_user_token.token) == false %>
+                      <%#= link_to 'Evalueaza!', evaluate_activity_path(:activity_id => activity.id), remote: true, class: 'btn btn-info' %>
+                      <a href="evaluation_form/<%= activity.id %>" class='btn btn-info'>Evalueaza</a>
+                  <% else %>
+
+                      <div class="btn btn-success">EVALUAT</div>
+                  <% end %>
+
+
+                </td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+    <% end %>
+  </div>
+</div>
+<% if @current_user_token.evaluation_session_cohort.optionals_number > 0 %>
+    <div class="well">
+      <div class="table-responsive">
+        <h3>Cursuri optionale</h3>
+        <h4> Poti evalua maxim
+          <% if @current_user_token.evaluation_session_cohort.optionals_number == 1 %>
+              1 optional.
+          <% else %>
+              <%= @current_user_token.evaluation_session_cohort.optionals_number %> optionale.
+          <% end %>
+        </h4>
+        <hr>
+
+        <% @optional_activities.each do |opt| %>
+            <h4> <%= opt[:course].title %> </h4>
+            <% allowed = can_be_eval(opt) %>
+            <table class="table table-striped table-hover ">
+              <thead>
+              <tr>
+                <th>Profesor</th>
+                <th>Tip</th>
+                <th></th>
+              </tr>
+              </thead>
+              <tbody class="session-index">
+
+              <% opt[:activities].each do |activity| %>
+                  <tr>
+                    <td class="col-md-8">
+                      <%= activity.teacher.last_name %> <%= activity.teacher.first_name %>
+                    </td>
+                    <td class="col-md-2">
+                      <%= activity.activity_type %>
+                    </td>
+                    <td class="col-md-2">
+                      <% if activity.evaluated == false %>
+                          <% if allowed == true %>
+                              <a href="evaluation_form/<%= activity.id %>" class='btn btn-info'>Evalueaza</a>
+                          <% else %>
+                              <a href="evaluation_form/<%= activity.id %>" class='btn btn-info disabled'>Evalueaza</a>                          <% end %>
+                      <% else %>
+
+                          <div class="btn btn-success">
+                            EVALUAT
+                          </div>
+
+                      <% end %>
+                    </td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+            <hr>
+        <% end %>
+      </div>
+    </div>
+<% end %>
+
+<br>

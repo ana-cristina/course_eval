@@ -1,0 +1,62 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<div>
+  <h4><b> <%= model['course'].title %></b> -- <b> <%= model['teacher'].first_name %> <%= model['teacher'].last_name %>
+  </b></h4>
+  <h5><i>
+    <%= model['activityType'] %></i></h5>
+  <hr>
+  Numar votanti: <%= model['participants_no'] %>
+</div>
+
+<div class="modal-body">
+
+  <% if model['participants_no'] > 0 %>
+      <% nr = 0 %>
+      <% model['content'].each_with_index do |section, qindex| %>
+        <%  section.each do |parent| %>
+          <% if parent["label"] %>
+
+              <h3><%= parent["label"] %></h3>
+              <hr>
+
+          <% elsif parent["intrebare"] %>
+
+              <% if parent["intrebare"].first["enunt"] %>
+
+                  <% enunt = parent["intrebare"].first["enunt"] %>
+                  <% r = parent["intrebare"].drop 1 %>
+
+              <% else %>
+
+                  <% r = parent["intrebare"] %>
+
+              <% end %>
+
+              <% if r.any? %>
+                  <% if enunt %>
+                      <h4><%= enunt %></h4>
+                  <% end %>
+                  <% v = model['votes'][nr+1] %>
+                  <ul>
+
+                    <% r.each_with_index do |rasp, i| %>
+                        <li><%= "#{v[i+1]} voturi: #{rasp["rasp"]}" %>
+                          <% procent = v[i+1].to_i * 100 / model['participants_no'] %>
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="<%= procent %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= procent %>%;">
+                              <%= procent %>%
+                            </div>
+                          </div>
+                        </li>
+                    <% end %>
+
+                  </ul>
+                      <% nr = nr + 1%>
+              <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+  <% else %>
+      Nicio evaluare pentru acest curs.
+  <% end %>
+</div>
