@@ -68,7 +68,7 @@ gem 'bootstrap-sass', '3.3.4.1'
 gem 'remotipart', '~> 1.2'
 
 gem 'execjs', '2.5.2'
-gem 'nokogiri', '1.6.6.2'
+gem 'nokogiri', '1.10.8'
 gem 'prawn', '2.0.1'
 gem 'prawn-table', '0.2.1'
 
