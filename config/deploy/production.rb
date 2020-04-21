@@ -64,13 +64,4 @@ set :rails_env, 'production'
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
- server '193.226.51.30',
-   user: 'proddeployer',
-   roles: %w{web app db},
-   ssh_options: {
-     user: 'proddeployer', # overrides user setting above
-     forward_agent: false,
-     port: 22,
-     auth_methods: %w(password),
-     password: '<deployer>'
-   }
+
