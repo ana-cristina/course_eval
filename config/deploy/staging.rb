@@ -63,15 +63,4 @@ set :rails_env, 'staging'
 #  }
 #
 # The server-based syntax can be used to override options:
-# ------------------------------------
- server '193.226.51.18',
-   user: 'rails_course',
-   roles: %w{web app db},
-   ssh_options: {
-     user: 'rails_course', # overrides user setting above
-     keys: %w(/home/rails_course/.ssh/id_rsa),
-     forward_agent: false,
-     port: 2022,
-     auth_methods: %w(publickey password)
-     # password: 'please use keys'
-   }
+
