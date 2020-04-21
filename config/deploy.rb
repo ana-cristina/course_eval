@@ -14,10 +14,10 @@
 
 # RUBY_V = '2.2.1'
 APP_NAME = 'fmi_evaluare'
-ROOT_PATH = "/home/proddeployer/apps/#{APP_NAME}"
+ROOT_PATH = ""
 
 set :application, APP_NAME
-set :repo_url, 'git@github.com:ana-org/CourseEval.git'
+set :repo_url, ''
 
 set :branch, 'master'
 # Default branch is :master
