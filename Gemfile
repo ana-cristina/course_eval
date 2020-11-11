@@ -56,7 +56,7 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'omniauth', '1.2.2'
+gem 'omniauth', '1.9.1'
 gem 'omniauth-oauth2', '1.3.0'
 
 gem 'responders', '~> 2.0'
