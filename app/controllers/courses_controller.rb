@@ -14,7 +14,7 @@
 
 class CoursesController < AdminController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
   respond_to :html, :js
 
   include CoursesHelper
@@ -71,9 +71,9 @@ class CoursesController < AdminController
     @errors =[]
     if request.post?
       CSV.parse params[:csv] do |row|
-        dep = Department.find_by_name(row[1].to_s.squish)
+        dep = Department.find_by_name(row[2].to_s.squish)
         if !dep.nil?
-          Course.create(title: row[0].to_s.squish,  department_id: dep.id)
+          Course.create(title: row[0].to_s.squish, uid: row[1].to_s.squish, department_id: dep.id)
         end
 
       end

@@ -17,9 +17,9 @@ class EvaluationSession < ActiveRecord::Base
   belongs_to :formS, :class_name => 'Form'
   belongs_to :formL, :class_name => 'Form'
   belongs_to :formP, :class_name => 'Form'
-
-  has_many :eval_session_activities, :dependent => :delete_all
-  has_many :evaluation_session_cohorts, :dependent => :delete_all
+  has_many :eval_session_activities, dependent: :destroy
+  has_many :evaluation_session_cohorts, :dependent => :destroy
+  has_many :incognito_users, dependent: :destroy
 
 
   attr_accessor :from_upload

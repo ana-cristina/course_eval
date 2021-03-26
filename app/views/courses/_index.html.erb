@@ -36,7 +36,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
         </span>
       Importa
   <% end %>
-  <%= link_to course_download_path(0), action: :get, class: 'btn btn-primary btn-no-padding' do %>
+  <%= link_to course_download_path(0), action: :get, class: 'btn btn-primary btn-no-padding',  download:true  do %>
         <span class="btn-label">
 			<span class="fa fa-download"></span>
         </span>
@@ -80,10 +80,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 <script type="application/javascript">
 
-    your_onchange_handler = function () {
-        $(".form").submit();
 
-    }
 
         $(document).ready(function() {
 

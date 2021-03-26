@@ -21,19 +21,19 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
         </span>
       Adauga
   <% end %>
-  <%= link_to teacher_import_from_app_path(0), action: :get, remote: true, class: 'btn btn-primary btn-no-padding' do %>
+ <!-- <%#= link_to teacher_import_from_app_path(0), action: :get, remote: true, class: 'btn btn-primary btn-no-padding' do %>
         <span class="btn-label">
 			<span class="fa fa-upload"></span>
         </span>
       Importa de la autentificare
-  <% end %>
+  <%# end %>-->
   <%= link_to teacher_import_path(0), action: :get, remote: true, class: 'btn btn-primary btn-no-padding' do %>
         <span class="btn-label">
 			<span class="fa fa-upload"></span>
         </span>
       Importa
   <% end %>
-  <%= link_to teacher_download_path(0), action: :get, class: 'btn btn-primary btn-no-padding' do %>
+  <%= link_to teacher_download_path(0), action: :get, class: 'btn btn-primary btn-no-padding',  download:true  do %>
         <span class="btn-label">
 			<span class="fa fa-download"></span>
         </span>

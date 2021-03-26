@@ -14,7 +14,7 @@
 
 class EvaluationSessionsController < AdminController
   before_action :set_evaluation_session, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
   include EvaluationSessionsHelper
   respond_to :html, :js, :pdf
 
@@ -316,7 +316,7 @@ class EvaluationSessionsController < AdminController
     course = Course.find_by_id(params[:courseId])
     teacher = Teacher.find_by_id(params[:teacherId])
 
-    send_data pdf.render, filename: "#{teacher.last_name}#{teacher.first_name}#{course.title}-#{params[:type]}.pdf",
+    send_data pdf.render, filename: "#{teacher.last_name}#{teacher.first_name}#{course.title}-#{params[:type]}.pdf".force_encoding('UTF-8'),
               type: 'application/pdf', disposition: 'attachment'
   end
 
@@ -384,7 +384,7 @@ class EvaluationSessionsController < AdminController
     respond_to do |format|
 
       format.pdf do
-        render pdf: "#{model['teacher'].last_name}#{model['teacher'].first_name}#{model['course'].title}-#{model['activityType']}-GRILA",
+        render pdf: "#{model['teacher'].last_name}#{model['teacher'].first_name}#{model['course'].title}-#{model['activityType']}-GRILA".force_encoding('UTF-8'),
                template: "templates/completed_eval.pdf.erb",
                locals: {:model => model}, disposition: 'attachment'
       end

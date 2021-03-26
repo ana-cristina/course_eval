@@ -17,10 +17,11 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 <div class="page-header">
   <h1>Statistici</h1>
   <hr/>
-  <%= link_to 'Descarca tot!', {:controller => "statistics", :action => "download_all" }, method: :get, class: 'btn btn-info' %>
+  <%= link_to 'Descarca tot csv!', {:controller => "statistics", :action => "download_all" }, method: :get, class: 'btn btn-info' %>
 <hr/>
   <%= link_to 'Descarca Raport pe grupe!', {:controller => "statistics", :action => "download_by_cohorts" }, method: :get, class: 'btn btn-info' %>
-
+<!--<hr/>-->
+  <%#= link_to 'Descarca arhiva cu pdf!', {:controller => "statistics", :action => "download_all_pdf" }, method: :get, class: 'btn btn-info' %>
 </div>
 
 

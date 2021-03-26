@@ -17,6 +17,8 @@ class EvalSessionActivity < ActiveRecord::Base
   belongs_to :evaluation_session_cohort
   belongs_to :teacher
   belongs_to :evaluation_session
+  has_many :completed_evaluations, dependent: :destroy
+
   attr_accessor :cohorts
   attr_accessor :activities
   attr_accessor :evaluated

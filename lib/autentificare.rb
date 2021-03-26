@@ -17,7 +17,7 @@ module OmniAuth
   module Strategies
     class Autentificare < OmniAuth::Strategies::OAuth2
 
-      CUSTOM_PROVIDER_URL = 'http://193.226.51.30/'
+      CUSTOM_PROVIDER_URL = ''
 
       option :client_options, {
         :site =>  CUSTOM_PROVIDER_URL,

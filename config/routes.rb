@@ -84,6 +84,7 @@ Rails.application.routes.draw do
 
   get 'view_statistics' => 'statistics#index'
   get 'download_all', :to => 'statistics#download_all'
+  match 'download_all_pdf/:id', :to => 'statistics#download_all_pdf', via: :get, as: 'download_all_pdf'
   get 'download_by_cohorts', :to => 'statistics#download_by_cohorts'
 
   get 'course_statistics/:course_id' => 'statistics#course_statistics'
@@ -119,7 +120,10 @@ Rails.application.routes.draw do
   match '/auth/failure', :via => [:get, :post], :to => 'user_sessions#failure'
 
   # Custom logout
-  match '/logout', :via => [:get, :post], :to => 'user_sessions#destroy'
+  # match '/logout', :via => [:get, :post], :to => 'user_sessions#destroy'
+  get 'alogin', to: 'user_sessions#new', as: 'login'
+  get 'logout', to: 'user_sessions#destroy', as: 'logout'
+  post 'alogin', to: 'user_sessions#create'
 
   #match 'test', :via => [:get], :to => 'cohorts#getAllCohorts'
 

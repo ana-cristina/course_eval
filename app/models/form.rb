@@ -14,6 +14,7 @@
 
 class Form < ActiveRecord::Base
   attr_accessor :form1
+  has_many :evaluation_sessions, dependent: :nullify
 
 
   def is_used

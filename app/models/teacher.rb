@@ -13,6 +13,8 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 class Teacher < ActiveRecord::Base
+  has_many :activities, dependent: :destroy
+  has_many :eval_session_activities, dependent: :destroy
 
   def self.as_csv
     CSV.generate do |csv|

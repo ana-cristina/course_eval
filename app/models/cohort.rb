@@ -14,6 +14,7 @@
 
 class Cohort < ActiveRecord::Base
   belongs_to :department
+  has_many :activities, dependent: :destroy
 
   def self.as_csv
     CSV.generate do |csv|

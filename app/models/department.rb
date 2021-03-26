@@ -13,4 +13,8 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 class Department < ActiveRecord::Base
+  has_many :cohorts, dependent: :destroy
+  has_many :courses, dependent: :destroy
+  has_many :evaluation_session_cohorts, dependent: :destroy
+
 end

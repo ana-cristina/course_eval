@@ -13,8 +13,8 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 class EvaluationController < ApplicationController
-  before_filter :token_login_required
-  skip_before_filter :verify_authenticity_token
+  before_action :token_login_required
+  skip_before_action :verify_authenticity_token
 
   include EvaluationHelper
   respond_to :html, :js

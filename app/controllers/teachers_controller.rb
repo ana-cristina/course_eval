@@ -14,7 +14,7 @@
 
 class TeachersController < AdminController
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
   respond_to :html, :js
 
 
@@ -68,7 +68,7 @@ class TeachersController < AdminController
     @errors =[]
     if request.post?
       CSV.parse params[:csv] do |row|
-        Teacher.create(first_name: row[1].to_s.squish, last_name: row[0].to_s.squish)
+        Teacher.create(first_name: row[1].to_s.squish, last_name: row[0].to_s.squish,email: row[2].to_s.squish)
       end
       get_all_teachers
     end

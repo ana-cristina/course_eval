@@ -13,7 +13,7 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 class ControlPanelController < AdminController
-  skip_before_filter :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
   include ControlPanelHelper
   respond_to :html, :js
 

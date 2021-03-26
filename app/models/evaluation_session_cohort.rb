@@ -15,4 +15,7 @@
 class EvaluationSessionCohort < ActiveRecord::Base
   belongs_to :department
   belongs_to :evaluation_session
+  has_many :eval_session_activities, dependent: :destroy
+  has_many :incognito_users, dependent: :destroy
+
 end

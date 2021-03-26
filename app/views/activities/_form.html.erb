@@ -25,7 +25,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
           <label class="col-lg-5 control-label text-primary">Materie:</label>
 
           <div class="col-lg-7">
-            <%= f.select :course_id, Course.all.collect { |p| [p.title, p.id] }, {selected: @activity.course_id, include_blank: true}, class: 'form-control' %>
+            <%= f.select :course_id, Course.all.order(:title).collect { |p| [p.title, p.id] }, {selected: @activity.course_id, include_blank: true}, class: 'form-control' %>
           </div>
         </div>
 

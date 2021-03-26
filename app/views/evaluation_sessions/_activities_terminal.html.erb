@@ -25,6 +25,6 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
       </td>
       <td><%= key[2] %></td>
       <td><%= link_to 'Vezi Evaluare', view_evaluation_path(:courseId => key[0], :teacherId => key[1], :type => key[2], :active_session => @active_session), remote: true, class: 'btn btn-info' %></td>
-      <td><%= link_to 'Descarca Comentarii', get_comments_path(:courseId => key[0], :teacherId => key[1], :type => key[2], :active_session => @active_session), class: 'btn btn-info' %></td>
+      <td><%= link_to 'Descarca Comentarii', get_comments_path(:courseId => key[0], :teacherId => key[1], :type => key[2], :active_session => @active_session), class: 'btn btn-info' ,  download:true%></td>
     </tr>
 <% end %>

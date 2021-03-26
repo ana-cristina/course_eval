@@ -31,7 +31,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
         <% end %>
         <% if @terminal_tokens and @terminal_tokens.any? %>
 
-            <%= link_to evaluation_session_get_tokens_path(@active_session.id), class: 'btn btn-primary token-btn btn-no-padding' do %>
+            <%= link_to evaluation_session_get_tokens_path(@active_session.id), class: 'btn btn-primary token-btn btn-no-padding',  download:true  do %>
         <span class="btn-label">
 			<span class="fa fa-download"></span>
         </span>

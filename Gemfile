@@ -16,64 +16,75 @@ source 'https://rubygems.org'
 
 #ruby '2.2.3'
 
-ruby '2.3.1'
+ruby '2.6.6'
 
-gem 'rails', '4.2.1'
+gem 'rails',  '5.2.4.1'
 
-gem 'pg', '0.18.1'
+gem 'rake', '~> 12.0'
 
-gem 'sass-rails', '~> 5.0'
+
+gem 'pg', '~> 0.20.0'
+
+gem 'sass-rails', '~> 5.0.4'
 
 gem 'uglifier', '>= 1.3.0'
 
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 5.0.0'
 
-# gem 'therubyracer', platforms: :ruby
 
-gem 'jquery-rails', '4.0.3'
+gem 'jquery-rails', '~> 4.3.5'
 
-gem 'turbolinks', '2.5.3'
+gem 'turbolinks', '~>5.2.0'
 
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder', '~> 2.6'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt-ruby', '3.1.2'
 
 
-gem 'capistrano', '3.4.0'
+gem 'capistrano', '3.11.0'
+gem 'capistrano-bundler'
+gem 'capistrano-passenger'
+gem 'capistrano-postgresql'
+gem 'capistrano-rails'
+gem 'capistrano-rbenv'
 # gem 'capistrano-rails', group: :development
 
-gem 'figaro', '1.1.0'
+gem 'figaro'
+
 
 group :development, :test do
-  gem 'capistrano-rbenv', '~> 2.0'
-
-  gem 'web-console', '~> 2.0'
-  gem 'better_errors', '~> 2.1.1'
+  gem 'better_errors', '~> 2.6.0'
 
   gem 'spring'
 end
 
-gem 'omniauth', '1.2.2'
-gem 'omniauth-oauth2', '1.3.0'
+gem 'omniauth', '1.9.1'
+gem 'omniauth-oauth2', '1.6.0'
 
-gem 'responders', '~> 2.0'
 gem 'jquery-ui-rails', '4.0.3'
 
-gem 'bootstrap-sass', '3.3.4.1'
 
 
 gem 'remotipart', '~> 1.2'
 
-gem 'execjs', '2.5.2'
-gem 'nokogiri', '1.6.6.2'
+gem 'execjs', '2.7.0'
+
 gem 'prawn', '2.0.1'
 gem 'prawn-table', '0.2.1'
-
-gem 'wicked_pdf'
+gem 'pdfkit'
+gem 'wicked_pdf', '1.4.0'
 gem 'wkhtmltopdf-binary'
 
 # for put on server
 gem 'rest-client', '~> 1.6.7'
+
+gem 'bootstrap-sass', '3.3.4.1'
+
+gem 'responders'
+
+gem 'factory_girl_rails', '4.2.1'
+
+gem 'creek'

@@ -13,4 +13,10 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 class User < ActiveRecord::Base
+
+  has_secure_password
+
+  def User.hash(token)
+    Digest::SHA1.hexdigest(token.to_s)
+  end
 end

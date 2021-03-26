@@ -56,7 +56,7 @@ class PdfComments < Prawn::Document
 
 
       header_box do
-        font('Helvetica', :size => 16) do
+        font('public/dejavu-sans/DejaVuSans.ttf', :size => 16) do
           text(header_text, :color => BROWN, :valign => :center)
         end
       end

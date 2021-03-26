@@ -15,7 +15,7 @@
 class ActivitiesController < AdminController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
   before_action :set_activityS, only: [ :editS, :updateS, :destroyS]
-  skip_before_filter :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
   respond_to :html, :js
 
   def index

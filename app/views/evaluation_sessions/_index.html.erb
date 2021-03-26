@@ -26,7 +26,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
       <td class="col-md-1"><%= evaluation_session.year %>
         -<%= evaluation_session.year + 1 %></td>
       <td class="col-md-1"><%= evaluation_session.session_status %></td>
-      <td class="col-md-2">
+      <td class="col-md-1">
 
         <%= evaluation_session.visibility == true ? 'Da' : 'Nu' %>
 
@@ -43,7 +43,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
         <% end %>
       </td>
 
-      <td class="col-md-2">
+      <td class="col-md-3">
         <% if evaluation_session.session_status == 'Finalizata' %>
             <%= link_to '', edit_evaluation_session_path(evaluation_session.id), remote: true, class: 'btn glyphicon glyphicon-edit disabled' %>
         <% else %>
@@ -52,6 +52,8 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
         <%= link_to '', evaluation_session_delete_path(evaluation_session.id), remote: true, class: 'btn glyphicon glyphicon-trash' %>
         <%#= link_to '', evaluation_session_visibility_path(evaluation_session.id), remote: true, class: 'btn glyphicon glyphicon-ok' %>
+
+        <%= link_to '', download_all_pdf_path(evaluation_session.id),download:true , class: 'btn glyphicon glyphicon-download' ,  data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> "}%>
       </td>
 
     </tr>

@@ -281,11 +281,6 @@ module EvaluationSessionsHelper
 
   def get_votes(completed_for_activity, qindex, no)
 
-
-    puts 'qindex ' + qindex.to_s
-    puts 'no ' + no.to_s
-    Rails.logger.debug('qindex ' + qindex.to_s)
-    Rails.logger.debug('no ' + no.to_s)
     results = []
     if no.nil? || no == 0
 
@@ -295,9 +290,7 @@ module EvaluationSessionsHelper
         results[rindex] = 0
       end
       completed_for_activity.each do |result|
-        puts result.inspect.to_s
-        puts 'result ' + result[qindex.to_s]
-        Rails.logger.debug(result[qindex.to_s])
+
         results[result[qindex.to_s].to_i] += 1
       end
       #  puts 'results ' + results.inspect.to_s

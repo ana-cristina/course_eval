@@ -15,4 +15,5 @@
 class IncognitoUser < ActiveRecord::Base
   belongs_to :evaluation_session_cohort
   belongs_to :evaluation_session
+  has_many :active_incognito_users, dependent: :destroy
 end

@@ -14,7 +14,7 @@
 
 class CohortsController < AdminController
   before_action :set_cohort, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
   respond_to :html, :js
   include CohortsHelper
 

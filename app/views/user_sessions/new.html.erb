@@ -1,0 +1,22 @@
+<p id=”alert”><%= alert %></p>
+<div class="myform form ">
+  <h1 class="page-header text-center">Autentificare</h1>
+
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+        <%= form_tag login_path do |form| %>
+          <div class="form-group">
+            <%= label_tag :email %>
+            <%= text_field_tag :email, '', { class:"form-control", placeholder: "Enter email" }  %>
+          </div>
+          <div class="form-group">
+            <%= label_tag :password %>
+            <%= password_field_tag :password, '', {  class:"form-control", placeholder: "Enter password" } %>
+          </div>
+          <div class="col-md-12 text-center ">
+            <%= submit_tag 'Login', class: " btn btn-block mybtn btn-primary tx-tfm"%>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>

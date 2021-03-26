@@ -1,5 +1,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <div>
+  <% if @mod %>
+   <% model = @mod %>
+    <% end %>
   <h4><b> <%= model['course'].title %></b> -- <b> <%= model['teacher'].first_name %> <%= model['teacher'].last_name %>
   </b></h4>
   <h5><i>

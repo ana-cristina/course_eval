@@ -14,74 +14,75 @@
 
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  helper_method :current_user
+
 
   API_URL = 'http://193.226.51.30/api/V2/'
 
   def login_required
-    if !current_user
+    unless  current_user
       respond_to do |format|
-        format.html {
-          redirect_to '/auth/autentificare'
-        }
-        format.json {
-          render :json => {'error' => 'Access Denied'}.to_json
-        }
+        format.html do
+          redirect_to '/alogin'
+        end
+        format.json do
+          render json: {'error' => 'Access Denied'}.to_json
+        end
       end
     end
   end
 
   def admin_only
-    if @current_user.is_admin == 'false'
+    unless @current_user.is_admin
       respond_to do |format|
-        format.html {
+        format.html do
           redirect_to logout_path
-        }
-        format.json {
-          render :json => {'error' => 'Access Denied'}.to_json
-        }
+        end
+        format.json do
+          render json: {'error' => 'Access Denied'}.to_json
+        end
       end
     end
   end
 
   def prof_only
-    if @current_user.is_teacher == 'false'
+    unless @current_user.is_teacher
       respond_to do |format|
-        format.html {
+        format.html do
           redirect_to logout_path
-        }
-        format.json {
-          render :json => {'error' => 'Access Denied'}.to_json
-        }
+        end
+        format.json do
+          render json: {'error' => 'Access Denied'}.to_json
+        end
       end
     end
   end
 
   def current_user
     return nil unless session[:user_id]
-    @current_user ||= User.find_by uid: session[:user_id]['uid']
+
+    @current_user ||= User.find_by(uid: session[:user_id])
   end
 
-
   def token_login_redirect
-    if current_user_token
-      redirect_to evaluate_path
-    end
+    redirect_to evaluate_path if current_user_token
   end
 
   def current_user_token
     return nil unless session[:user_token]
+
     @current_user_token ||= IncognitoUser.find_by_token session[:user_token]['token']
   end
 
   def token_login_required
-    if !current_user_token
+    unless current_user_token
       respond_to do |format|
-        format.html {
+        format.html do
           redirect_to home_index_path
-        }
-        format.json {
-          render :json => {'error' => 'Access Denied'}.to_json
-        }
+        end
+        format.json do
+          render json: {'error' => 'Access Denied'}.to_json
+        end
       end
     end
   end

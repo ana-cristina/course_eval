@@ -2,13 +2,14 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: ana
-  password: ana
 
 
 development:
   <<: *default
   database: CourseEval_development
+  username: postgres
+  password: 1234
+
   #username: CourseEval
   #password:
   #host: localhost

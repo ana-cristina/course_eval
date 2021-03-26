@@ -13,8 +13,8 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 class ProfController < ApplicationController
-  before_filter :login_required
-  before_filter :prof_only
+  before_action :login_required
+  before_action :prof_only
   include ProfHelper
   include EvaluationSessionsHelper
   respond_to :html, :js, :pdf
