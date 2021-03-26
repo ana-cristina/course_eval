@@ -16,9 +16,10 @@ source 'https://rubygems.org'
 
 #ruby '2.2.3'
 
-ruby '2.6.6'
+#ruby '2.6.6'
+ruby '3.0.0'
 
-gem 'rails',  '5.2.4.1'
+gem 'rails',  '6.1.3.1'
 
 gem 'rake', '~> 12.0'
 
@@ -64,7 +65,7 @@ end
 gem 'omniauth', '1.9.1'
 gem 'omniauth-oauth2', '1.6.0'
 
-gem 'jquery-ui-rails', '4.0.3'
+gem 'jquery-ui-rails', '6.0.1'
 
 
 
