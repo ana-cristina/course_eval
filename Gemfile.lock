@@ -124,7 +124,9 @@ GEM
       mimemagic (~> 0.3.2)
     method_source (1.0.0)
     mime-types (1.25.1)
-    mimemagic (0.3.4)
+    mimemagic (0.3.9)
+      nokogiri (~> 1)
+      rake
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
@@ -233,7 +235,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.4)
+    websocket-extensions (0.1.5)
     wicked_pdf (1.4.0)
       activesupport
     wkhtmltopdf-binary (0.12.5.4)
