@@ -79,7 +79,7 @@ gem 'wicked_pdf', '1.4.0'
 gem 'wkhtmltopdf-binary'
 
 # for put on server
-gem 'rest-client', '~> 1.6.7'
+gem 'rest-client', '~> 1.8.0'
 
 gem 'bootstrap-sass', '3.3.4.1'
 
