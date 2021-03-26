@@ -81,7 +81,7 @@ gem 'wkhtmltopdf-binary'
 # for put on server
 gem 'rest-client', '~> 1.6.7'
 
-gem 'bootstrap-sass', '3.3.4.1'
+gem 'bootstrap-sass', '3.4.1'
 
 gem 'responders'
 
