@@ -61,8 +61,8 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'omniauth', '1.9.1'
-gem 'omniauth-oauth2', '1.6.0'
+gem 'omniauth', '2.0.3'
+gem 'omniauth-oauth2', '1.7.1'
 
 gem 'jquery-ui-rails', '4.0.3'
 
