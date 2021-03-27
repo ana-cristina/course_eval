@@ -45,7 +45,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt-ruby', '3.1.2'
 
 
-gem 'capistrano', '3.11.0'
+gem 'capistrano', '3.16.0'
 gem 'capistrano-bundler'
 gem 'capistrano-passenger'
 gem 'capistrano-postgresql'
