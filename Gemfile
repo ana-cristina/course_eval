@@ -24,7 +24,7 @@ gem 'rails',  '6.1.3.1'
 gem 'rake', '~> 12.0'
 
 
-gem 'pg', '~> 0.20.0'
+gem 'pg', '1.2.3'
 
 gem 'sass-rails', '~> 6.0.0'
 
