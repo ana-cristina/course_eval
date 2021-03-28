@@ -1,4 +1,4 @@
-class RenameEvaluationSessionActivityToEvalSessionActivity < ActiveRecord::Migration
+class RenameEvaluationSessionActivityToEvalSessionActivity < ActiveRecord::Migration[4.2]
   def change
   end
 end

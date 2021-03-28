@@ -1,4 +1,4 @@
-class CreateIncognitoUsers < ActiveRecord::Migration
+class CreateIncognitoUsers < ActiveRecord::Migration[4.2]
   def change
     create_table :incognito_users do |t|
       t.string :token

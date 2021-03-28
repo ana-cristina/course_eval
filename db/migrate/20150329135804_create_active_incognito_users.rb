@@ -1,4 +1,4 @@
-class CreateActiveIncognitoUsers < ActiveRecord::Migration
+class CreateActiveIncognitoUsers < ActiveRecord::Migration[4.2]
   def change
     create_table :active_incognito_users do |t|
       t.datetime :start_date

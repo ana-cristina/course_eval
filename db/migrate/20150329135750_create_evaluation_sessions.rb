@@ -1,4 +1,4 @@
-class CreateEvaluationSessions < ActiveRecord::Migration
+class CreateEvaluationSessions < ActiveRecord::Migration[4.2]
   def change
     create_table :evaluation_sessions do |t|
       t.date :start_date

@@ -1,4 +1,4 @@
-class CreateEvaluationSessionCohorts < ActiveRecord::Migration
+class CreateEvaluationSessionCohorts < ActiveRecord::Migration[4.2]
   def change
     create_table :evaluation_session_cohorts do |t|
       t.string :name

@@ -1,4 +1,4 @@
-class RemoveActivityTypeFromCourses < ActiveRecord::Migration
+class RemoveActivityTypeFromCourses < ActiveRecord::Migration[4.2]
   def change
     remove_column :courses, :activity_type, :string
     remove_column :courses, :department, :string

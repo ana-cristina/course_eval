@@ -1,4 +1,4 @@
-class CreateCompletedEvaluations < ActiveRecord::Migration
+class CreateCompletedEvaluations < ActiveRecord::Migration[4.2]
   def change
     create_table :completed_evaluations do |t|
       t.references :course, index: true, foreign_key: true
