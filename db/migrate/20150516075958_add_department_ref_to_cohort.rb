@@ -1,4 +1,4 @@
-class AddDepartmentRefToCohort < ActiveRecord::Migration
+class AddDepartmentRefToCohort < ActiveRecord::Migration[4.2]
   def change
     add_reference :cohorts, :department, index: true, foreign_key: true
     add_column :cohorts, :year, :integer
