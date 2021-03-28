@@ -1,0 +1,1 @@
+!function(n,t){var e;n.App=(e=!1,{init:function(){if(!e){var n=!(e=!0),i=$("#inner-wrap");$("#nav-open-btn").on("click",function(){if(!n)return i.animate({left:"70%"},500),!(n=!0)}),$("#nav-close-btn").on("click",function(){if(n)return i.animate({left:"0"},500),n=!1}),$(t.documentElement).addClass("js-ready")}}}),$.fn.ready(function(){n.App.init()})}(window,window.document);
